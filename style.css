@@ -27,7 +27,7 @@
     background-color: #ccc;
 }
 
-.tab .memoriam button {
+.tab .eddie button {
     background-color: inherit;
     float: right;
     border: none;
@@ -40,7 +40,7 @@
 .tab .buddy button {
     background-color: #9e736d;
     float: right;
-    border: 3px solid #636363;
+    border: 1px solid #636363;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
