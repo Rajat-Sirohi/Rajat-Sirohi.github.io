@@ -27,7 +27,7 @@
     background-color: #ccc;
 }
 
-.tab .eddie button {
+.tab .rat button {
     background-color: inherit;
     float: right;
     border: none;
@@ -35,6 +35,12 @@
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+}
+.tab .rat button:hover {
+    background-color: #ddd;
+}
+.tab .rat button.active {
+    background-color: #ccc;
 }
 
 .tab .buddy button {
