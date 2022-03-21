@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-21 Mon 06:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Will</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body style="background-color:#f4edd9">
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcb96419">1. Christian List's view</a></li>
+<li><a href="#org3ddf71e">2. What is free will?</a></li>
+<li><a href="#org48c6822">3. Libet experiments</a></li>
+<li><a href="#org8245507">4. Tumors all the way down</a></li>
+<li><a href="#org1ddff3a">5. Newcomb's Paradox</a>
+<ul>
+<li><a href="#org8cb4b5d">5.1. Statement of the problem</a></li>
+<li><a href="#org9b7fe23">5.2. Explaining the dilemma</a></li>
+<li><a href="#orgdfec7f2">5.3. Reformulating the paradox using probability theory</a>
+<ul>
+<li><a href="#org9a593ba">5.3.1. Two-Boxer's argument (NO)</a></li>
+<li><a href="#org446ebdc">5.3.2. One-Boxer's argument (YES)</a></li>
+</ul>
+</li>
+<li><a href="#org71a199b">5.4. Conclusion</a></li>
+<li><a href="#orge35b999">5.5. Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb96419" class="outline-2">
+<h2 id="orgcb96419"><span class="section-number-2">1</span> Christian List's view</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://www.youtube.com/watch?v=XHmdhDjLGwA">This interview</a> with philosopher Christian List succinctly and pretty comprehensively lays out List's view, and serves as a helpful framework through which to understand the debates about free will. The basic idea is that he sees free will as requiring <b>three components</b>: (1) intentional agency (2) choice between alternative possibilities (3) mental causal control over decisions. Each of these tenets is challenged by reductive materialism [23:06], determinism [36:25], and epiphenomenalism [50:40], respectively.
+</p>
+
+<p>
+<span class="underline">1. Reductive Materialism</span>
+Free will requires that humans are intentional agents, i.e., they are goal-directed creatures. For example, when I pick up a pen, it is because I <i>want</i> to write something down (that is my intention). Reductive materialism claims that such intentions are merely illusory, not real features of the world. When we look at the world as it really is, at the level of particle physics (or even just cellular biology), we see that there is no room for intentionality&#x2014;particles and cells don't have thoughts, desires, beliefs, goals, and so on, they just act.
+</p>
+
+<p>
+The response to this challenge is that many facets of reality are not describable at the level of particle physics of cellular biology, but that this does not motivate us to call them illusory, especially when these features are considered explanatorily indispensable. For example, solidity is a concept which only emerges at the macro-level of human perception; at the level of subatomic particles, a brick is really just a buzzing sea of interacting particles, indistinguishable from a so-called "hollow" object (recall the <a href="https://www.youtube.com/watch?v=P0TNJrTlbBQ">Sixty Symbols video</a> about whether atoms touch, and the confusion that arises when trying to apply a macro-level understanding of "touching" down to the micro-level, which has no such concept). Does this mean solidity is an illusion? No! The concept is explanatorily indispensable for distinguishing between solid and hollow objects, so we are warranted in considering it a real phenomenon. Similarly, any even remotely human concept like law, person, or emotion is clearly irreducible to either particle physics or cellular biology, and yet given their explanatory indispensability in so many contexts, the (insurmountable) burden of proof is on the reductive materialist to provide an alternative, at-least-as-good explanation for phenomena such as criminal justice, friendship, and catharsis at the level of particle physics of cellular biology. Until this is provided, we are warranted in maintaining our higher-level concepts for describing what (tentatively) appear to be irreducibly higher-level phenomena, such as free will.
+</p>
+
+<p>
+<span class="underline">2. Determinism</span>
+Free will requires the choice between alternative possibilities, i.e., that one <i>really has</i> the option between choosing to raise their left or right arm when simply asked to raise their arm; and that whichever decision one makes, they <i>really could have</i> chosen to raise the other arm instead. If determinism is true, as motivated by the scientific picture of the world given to us by Newton and so on, then this choice between alternative possibilities is merely illusory. In fact, my decision to raise my left arm instead of my right arm was already determined at the start of time, and that my so-called "choice" was merely the culmination of the laws of nature acting upon the initial conditions specified by the Big Bang. Personally, I find this picture of the world extremely compelling, since the history of science has continually informed me that the nature acts according to regularities, not haphazardly, and that all apparent irregularities (such as the complexity of life) are really just products of our ignorance of the relevant natural laws, not genuine quirks in the fabric of reality. Indeterminism (of the free-will sort, not just randomness) would therefore be a monumental transformation away from my picture of the world as fundamentally just a very complicated machine, acting according to natural laws (stochastic natural laws are fine too, just not ones which differ from individual to individual, which I would hardly call a law, but which appear to be necessary for libertarian free will).
+</p>
+
+<p>
+The challenge to determinism is, again, to specify the level of description; so that there might be determinism at the level of particle physics but indeterminism at the level of human action. To motivate this, consider the descriptions of the behavior of gasses given to us by classical mechanics, on the one hand, versus statistical mechanics, on the other hand. According to classical mechanics, the behavior of gasses is totally deterministic, determined by the positions and velocities of the constituent particles and their interactions according to the laws of nature. According to statistical mechanics, the behavior of gasses is stochastic, behaving according to statistical laws such as entropy. So it appears that the indeterminism at a higher level of description from determinism at a lower level of description.
+</p>
+
+<p>
+Personally, I don't find this response to the challenge compelling, partly because of my strong prior commitments to determinism as described above, but also because I don't think indeterminism can <i>really</i> emerge at a higher level of description. The apparent indeterminism is really just a product of our ignorance of the relevant details, due to speaking at a higher level of description; but as soon as we provide the relevant details, by speaking a more fine-grained level of description, the apparent indeterminism collapses into what it actually is, determinism. So, as long as we believe that these higher levels of description are <i>causally</i> reducible to the lower levels of description, the apparent discrepancies in determinism vs. indeterminism are merely illusory.
+</p>
+
+<p>
+(Note on quantum indeterminacy: Even if nature really contains stochastic laws at the fundamental level, i.e., irreducible to deterministic laws, this kind of indeterminism seems to be inadequate for grounding human free-will. But I'm open to theories which suggest otherwise, such as by <a href="https://www.semanticscholar.org/paper/Is-free-will-an-illusion-Heisenberg/8867c25e19adf4ac6592c4ca0c291a9e2ad0369d">Martin Heisenberg</a>.)
+</p>
+
+<p>
+<span class="underline">3. Epiphenomenalism</span>
+Free will requires that our decisions are <i>caused</i> by our mental states, i.e., that when I choose to stand up from my chair and go to the bathroom, it is <i>really because</i> I <i>desired</i> to go to the bathroom; that my mental state (desire) caused me to act in the way that I did (go to the bathroom). Epiphenomenalism contends that mental states are merely causally-inert byproducts of some underlying physical process which is what's <i>truly</i> casually responsible for my decisions. This view is motivated by both conceptual and scientific considerations. The conceptual considerations are as follows: (1) <i>causal closure principle</i>, i.e., that every effect which has a physical manifestation also has a physical cause (2) <i>causal exclusion principle</i>, i.e., that physical causes are sufficient for explaining effects with physical manifestations, and so introducing nonphysical causes would violate the principle of parsimony. The scientific considerations come from Benjamin Libet's experiments, which appear to demonstrate that our spontaneous decisions to perform simple tasks are in fact determined some nontrivial time prior to our becoming consciously aware of having made the decision, which suggests that the conscious "choice" is merely an epiphenomenon, not causally efficacious (unless we are willing to countenance retroactive causation).
+</p>
+
+<p>
+In response, the conceptual challenges are extremely strongly motivated and difficult to overcome. The main rebuttal is to point out that if we interpret causation in difference-making terms&#x2014;A causes B iff A makes a systematic difference B even when controlling for all other factors&#x2014;then it seems like the difference-makers in human decisions are psychological factors (e.g. desire, belief, emotion) rather than neurophysiological factors, in which case the physical world really isn't causally closed. The scientific challenges, on the other hand, are far less compelling. Firstly, the experiments were only applied to very simple tasks (such as spontaneously choosing to press a button), but most human choices are far more complex, such as deciding to get married or have kids. So even if epiphenomenalism applies to simple spontaneous tasks, it's not clear why we should extrapolate these results to the more complex decisions humans make all the time, which involve lots of conscious deliberation and seem the most clearly to involve free will. Secondly, the empirical findings are not totally inconclusive; the ability to predict the experimental subject's decision from the preliminary neural activity was not much better than random chance (TODO: double check this, I think it comes from Alfred Mele).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ddf71e" class="outline-2">
+<h2 id="org3ddf71e"><span class="section-number-2">2</span> What is free will?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<span class="underline">Common conception of free will is incoherent:</span>
+If our behavior is entirely determined, then we can't be free because there's no sense in which we <i>could have done otherwise</i>. But if our behavior is totally undetermined (e.g. random), then we still can't be free because there's no sense in which we <i>decide to act</i> in one way or another. At the end of the day, there's no room for this common conception of free will to fit into any picture of reality when analyzed at the level of causality.
+</p>
+
+<p>
+<span class="underline">New understanding of free will:</span>
+<b>To have <i>free will</i> is to act in the way in which we <i>decide</i> to act</b>. The defining component is that of decision. This refined understanding of free will resolves the above dilemma/incoherence by allowing for one's decision to fit into the causal order: our decisions are not effects but causes. In this way, we eschew the rabbit hole of libertarian free will, which somehow tries to place free will outside of the causal order, as niether being an effect or cause, which is radically subversive to our modern scientific picture of the world.
+</p>
+
+<p>
+<del>The main question then becomes, <b>what is the basis of our decisions?</b> If, in fact, our decisions are ultimately reducible to the motion of fundamental particles of matter, then it seems silly to claim that we really <i>decided</i> to act in a certain way; rather, we would say that our decision was made for us by circumstances outside of our control. Therefore, true decisions must be <b><i>causally irreducible</i></b>. That is, an agent's decision must be a fundamental causal entity which could not have been predicted by Laplace's demon.</del>
+-&gt; Actually, I'm not sure how important <i>causal irreducibility</i> actually is. This actually seems to be really difficult to make sense of, and so what if our actions could have been predicted by Laplace's demon? I think the important point of free will is that our concious deliberation plays a causal role in determining our actions. We are not thermostats, or people being driven along helplessly by our genes expressed in an environment. However it may be, these genes expressed in an environment (and this picture is ultimately reducible to just the interactions of fundamental particles) produce consciousness and therefore deliberation and therefore free will. This free will does not lie outside of the causal order like libertarian free will; rather, it exists as a helpful concept for distinguishing the behavior of a normal person from someone who is addicted to drugs, or coerced by their environment, or suffering from some brain tumor.
+-&gt; The important question is really how free will emerges from these natural phenomena. It's just nonsensical to deny that we have free will simply because it's difficult to explain it with reference to our current scientific picture of the world. Ultimately, if our scientific method is unable to account for free will, then so much for the scientific method. It's epistemologically unsound to prioritize abstract reason (science) over direct experience (free will).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48c6822" class="outline-2">
+<h2 id="org48c6822"><span class="section-number-2">3</span> Libet experiments</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+All that the Libet experiments show is that decisions (especially very simple ones like deciding to raise one's finger) are first made unconsciously before rising to the level of consciousness. This really shouldn't have been surprising, since most cognition is unconscious.
+</p>
+
+<p>
+Armed with our refined notion of free will from above (namely, one which is defined by the ability to make decisions), the Libet experiments don't threaten human free will since we still made the decision to lift our finger. The fact that it was decided unconsciously doesn't refute the fact that a decision was made.
+-&gt; To be fair, if the neural patterns which were observed (and identified with having made the decision preconsciously) could be reduced to &#x2026;
+</p>
+
+<p>
+These experiments were also (obviously) limited to very simply decisions like deciding to lift one's finger. But it's not justified to generalize these results to much more complex human decisions (like the ones we make every single day), in which free will appears to play an even more prominent role.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8245507" class="outline-2">
+<h2 id="org8245507"><span class="section-number-2">4</span> Tumors all the way down</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This idea seems to really conflate the psychology of someone who intentionally commits murder vs. someone who commits murder because they had a massive tumor. The former may very well be convinced by reasoning, deliberation, and pleading; whereas the latter is motivated by some inexorable force which is 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ddff3a" class="outline-2">
+<h2 id="org1ddff3a"><span class="section-number-2">5</span> Newcomb's Paradox</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8cb4b5d" class="outline-3">
+<h3 id="org8cb4b5d"><span class="section-number-3">5.1</span> Statement of the problem</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+There are two boxes, one which is known to have $1000, and another which has either $0 or $1 million. You are allowed to choose either the one box with unknown contents, or both boxes. HOWEVER, prior to you making your decision, an incredibly intelligent being already decided what to place in the mystery box based on the following rule:
+(1) If She predicted that you would choose both boxes, then she placed $0 in the mystery box.
+(2) If She predicted that you would choose the mystery box, then she placed $1 million in the mystery box.
+</p>
+
+<p>
+Given that She is assumed to be an incredibly reliable predictor, how should you decide?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b7fe23" class="outline-3">
+<h3 id="org9b7fe23"><span class="section-number-3">5.2</span> Explaining the dilemma</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Each decision (one-boxing or two-boxing) has intuitive appeal.
+</p>
+
+<p>
+On the one hand, surely you should choose both boxes since Her decision to populate the mystery box has already been made, and so your decision to choose the boxes can't possibly change the contents of either box (i.e. metaphysical absurdity), in which case choosing both boxes can only help you by guaranteeing an additional $1000. [strategic dominance]
+</p>
+
+<p>
+On the other hand, if She is really such a reliable predictor, then don't I have very good odds of her placing $1 million in the mystery box if I one-box (since my decision to one-box would likely have been predicted by her)? [maximize expected utility]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfec7f2" class="outline-3">
+<h3 id="orgdfec7f2"><span class="section-number-3">5.3</span> Reformulating the paradox using probability theory</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Let's try to formulate this problem more rigorously using the language of probability theory:
+</p>
+
+<p>
+A  = I one-box
+~A = I two-box
+B  = She predicted that I one-box = mystery box has $1 million
+~B = She predicted that I two-box = mystery box has $0
+</p>
+
+<p>
+Given that She is a very reliable predictor, we know:
+P(A|B)   = 1-s (approx. equal to 1)
+P(A|~B)  = s   (approx. equal to 0)
+P(~A|B)  = s   (approx. equal to 0)
+P(~A|~B) = 1-s (approx. equal to 1)
+</p>
+
+<p>
+<span class="underline">Question:</span> How does P(B|A) depend on P(B)? Does P(B|A) = P(B)?
+In other words, is the event that the one box has $1 million independent of my decision? Intuitive metaphysical assumptions (like ruling out retrocausation) suggest that A and B should be independent. But actually working the probabilities using Bayes' Rule suggests otherwise:
+</p>
+
+<p>
+P(B|A) = P(A ^ B) / P(A)
+= P(A|B) * P(B) / P(A)
+= (1-s) * P(B) / P(A)
+= (1-s) * P(B) / [P(A ^ B) + P(A ^ ~B)]
+= (1-s) * P(B) / [P(A|B)*P(B) + P(A|~B)*P(~B)]
+= (1-s) * P(B) / [(1-s) * P(B) + s * P(~B)]
+= (1-s) * P(B) / [(1-s) * P(B) + s * (1 - P(B))]
+= (1-s) * P(B) / [(1-2s) * P(B) + s]
+</p>
+
+<p>
+The one-boxers want to say that P(B|A) = 1-s, because She's a reliable predictor. But I think that all we really know from this is that P(A|B) = 1-s.
+</p>
+
+<p>
+To determine P(B|A) from P(A|B), we need to also know P(B); and from the analysis above, we see that if P(B) &lt;= s, then P(B|A) &lt;= 0.5 (rapidly approaches 0), and if P(B) &gt;= s, then P(B|A) &gt;= 0.5 (rapidly approaches 1). Therefore, depending on our prior probability P(B), there actually could be a very small probability P(B|A). But, since s is assumed to be very small, it's very likely that P(B) &gt;= s, hence P(B|A) &gt;= 0.5.
+</p>
+
+<p>
+<span class="underline">Question:</span> How does P(B|~A) depend on P(B)?
+P(B|~A) = P(~A ^ B) / P(~A)
+= P(~A|B) * P(B) / P(~A)
+= s * P(B) / P(~A)
+= s * P(B) / [P(~A ^ B) + P(~A ^ ~B)]
+= s * P(B) / [P(~A|B)*P(B) + P(~A|~B)*P(~B)]
+= s * P(B) / [s * P(B) + (1-s) * P(~B)]
+= s * P(B) / [s * P(B) + (1-s) * (1 - P(B))]
+= s * P(B) / [s * P(B) + 1 - P(B) - s + s * P(B)]
+= s * P(B) / [(2s-1) * P(B) + 1-s]
+</p>
+
+<p>
+From the analysis above, we see that if P(B) &lt;= 1-s, then P(B|~A) &lt;= 0.5 (rapidly approaches 0), and if P(B) &gt;= 1-s, then P(B|A) &gt;= 0.5 (rapidly approaches 1). Since s is assumed to be very small, it's very likely that P(B) &lt;= 1-s, hence P(B|~A) &lt;= 0.5.
+</p>
+
+<hr />
+
+<p>
+So, we've discovered that when formulating the problem in terms of posterior probabilities, knowing that a player decided to one-box (event A) DOES in fact give us reason to believe that She would have predicted this (because she's a reliable predictor), and so the mystery box likely has $1 million (event B).
+</p>
+
+<p>
+So, now we've established a relationship between my prior probability P(B) and the likelihood that, given that I either one-box or two-box, the box will have $1 million. Importantly, because we assume that She is a very reliable predictor (s ~ 0), this relationship entails that P(B|A) is likely high, and P(B|~A) is likely low. This conclusion is what motivates the decision to one-box.
+</p>
+
+<p>
+(Note: We can't say that P(B|A) = 1-s exactly, only that it's likely high since P(B|A) rapidly approaches 1 as P(B) &gt;= s, which is very likely since s is very small.)
+</p>
+
+<p>
+Here's the confusion: Are these two statements equivalent? The one-boxer says yes, the two-boxer says no:
+(1) The probability that the box will have $1 million &lt;GIVEN THAT&gt; I one-box is likely high
+(2) The probability that the box will have $1 million &lt;IF&gt; I one-box is likely high
+</p>
+</div>
+
+<div id="outline-container-org9a593ba" class="outline-4">
+<h4 id="org9a593ba"><span class="section-number-4">5.3.1</span> Two-Boxer's argument (NO)</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Statement (1) applies after the decision has already been made; I've already decided to one-box, and I have the box in my hand, but before opening the box, I can appropriately take comfort in the fact that P(B|A) is likely high.
+</p>
+
+<p>
+Statement (2) applies before the decision has been made; I'm presented with Newcomb's Problem and asked to make a decision, but I can't take comfort in the fact that P(B|A) is likely high since I haven't yet decided A!
+</p>
+
+<p>
+The two statements are not equivalent because one refers to posterior probabilities, whereas the other refers to prior probabilities. Here are the same statements translated into the language of Bayesian probability:
+(1) P(B|A) is likely high
+(2) P(B) is likely high if A
+</p>
+
+<p>
+In this form, it's clearer to see why (1) != (2). Moreover, the ridiculousness of statement (2) becomes more obvious; how could a prior probability, P(B), be affected by an event, A? That just misunderstands the very notion of prior probabilities, which are supposed to be decided prior to any events taking place.
+</p>
+
+<p>
+This is why the decision to one-box is confused. It mistakenly supposes that statement (1) is equivalent to (or implied by) statement (2); but not only is this not the case, in fact, statement (2) is incoherent due to the nature of prior probabilities. This is why the correct decision is to two-box.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org446ebdc" class="outline-4">
+<h4 id="org446ebdc"><span class="section-number-4">5.3.2</span> One-Boxer's argument (YES)</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<p>
+What statement (1) tells us is that if we're given the information that the player in Newcomb's problem one-boxed, then this should give us confidence that the box probably has $1 million (assuming that She is a very reliable predictor). However, in the case of statement (2), we're not given any information about what the player has decided (because he hasn't decided yet). The question is whether, per statement (2), AFTER the player has decided to one-box, do we have the same information as in statement (1)?
+</p>
+
+<p>
+If yes, then it really is the case that deciding to one-box GIVES us new information about the content of the boxes, in which case we're no longer talking about prior probabilities, P(B), but rather posterior probabilities, P(B|A); and so we're not confusing the two, as alleged by the two-boxers.
+</p>
+
+<p>
+If no, then merely deciding to one-box doesn't allow us to fruitfully utilize the posterior probability, P(B|A), in which case we have to resort to the prior probability, P(B), which isn't informative for our decision, since it could be anywhere from 0 to 1.
+</p>
+
+<p>
+So why wouldn't deciding to one-box give us the same information as being told that another player decided to one-box? According to the one-boxer, there is no difference, which seems intuitively right, so the burden is on the two-boxer to provide a symmetry breaker. In the absence of such a distinguishing feature, the one-boxer is justified in believing that after making the decision to one-box, the probability that the mystery box has $1 million dollars increases from the prior probability, P(B), to the posterior probability P(B|A).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71a199b" class="outline-3">
+<h3 id="org71a199b"><span class="section-number-3">5.4</span> Conclusion</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Recall the Monty Hall problem, where the host's decision to reveal one door with a goat somehow raises the probability that the car is behind the other door than was initially chosen. At first, this conclusion seems unacceptable: How could the probability possibly change? It's not like the remaining goat and car were somehow shuffled around after the reveal! But this concern seems to be resolved once we explain that the probability is based on our INFORMATION about the positions of the goats and car (which does change), not the ACTUAL positions of the goats and car (which doesn't change).
+</p>
+
+<p>
+Like in the Monty Hall problem, the objection to the one-boxer's analysis rests on the shocking conclusion that the probability of the box having $1 million dollars somehow changes as a result of our decision. But the surprise seems to be resolved once we acknowledge that the decision provides us with new information which can be incorporated into our probability calculation, i.e., going from prior to posterior probability.
+</p>
+
+<p>
+This also defuses the objection that raising the probability somehow relies on "spooky" retrocausation, as if my decision to one-box somehow CAUSED or even INFLUENCED Her prior decision to populate the mystery box. What's actually happening is not that the contents of the box are somehow changing, but instead that the confidence of my beliefs regarding the contents of the mystery box have changed in light of gaining new information (namely, that I decided to one-box).
+</p>
+
+<p>
+In conclusion, if we accept the terms of problem as stated (most controversionally that She is a reliable predictor), then my analysis using probability theory seems to pretty <b>inescapably support one-boxing</b>. This conclusion does not rely upon any spooky metaphysical assumptions or clever leaps of logic; it just follows straight-forwardly from the probability theory, just like the Monty Hall problem. In fact, if we could simulate this on a computer (like the Monty Hall problem), we would discover that one-boxing does indeed maximize one's earnings.
+</p>
+
+<p>
+HOWEVER, there is still room for objection. As far as my analysis is concerned, it's not reasonable to advocate two-boxing, but one CAN object to the metaphysical possibility of a reliable predictor, and thereby undermine the entire problem itself. If one believes in robust free-will, then this seems like a fruitful avenue, and it would explain many people's intuitions behind the reasonableness of two-boxing, since it just seems really "spooky" that my decision to one-box could somehow provide information about what She predicted earlier. BUT, if we accept determinism, then this apparently "spooky" conclusion necessarily follows.
+</p>
+
+<p>
+Personally, I think Newcomb's so-called paradox is therefore resolved by the decision to one-box; however, it creates important tensions for the compatabilist, because I think any sensible notion of free-will should make Newcomb's problem metaphysically impossible (due to the reliable predictor), but under determinism, such a predictor is perfectly possible (even quite natural).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge35b999" class="outline-3">
+<h3 id="orge35b999"><span class="section-number-3">5.5</span> Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Although my conclusion in favor of one-boxing was quite adamant, I should point out that my conclusion technically relies on favoring <i>evidential decision theory</i> over <i>causal decision theory</i>, and that this is typically what interests most people about the paradox.
+</p>
+
+<p>
+<span class="underline">Evidential Decision Theory (EDT):</span> Take the action which maximizes the expected outcome (i.e. the outcome which is most likely, conditional on taking the action).
+</p>
+
+<p>
+<span class="underline">Causal Decision Theory (EDT):</span> Take the action which, given the state of the world (things outside of one's control), causes the best expected outcome.
+</p>
+
+<p>
+EDT favors one-boxing because the probability analysis demonstrates that the expected outcome from two-boxing is $1000, whereas the expected outcome from one-boxing is $1 million.
+</p>
+
+<p>
+CDT favors two-boxing because it is unilaterally preferable to choose both boxes when enumerating over the uncertainty in the contents of the mystery box; if the mystery box contains nothing, then it's better to choose both so that one gets $1000 instead of $0; and if the mystery box contains $1 million, then it's better to choose both so that one gets $1.0001 million instead of just $1 million.
+</p>
+
+<hr />
+
+<p>
+In the case where the reliability of the predictor is extremely high, as assumed, I think it's obvious that we should prefer EDT over CDT, but I guess people can have competing intuitions about that. Ultimately, what my probability analysis demonstrates is that EDT does in fact support one-boxing (which I was initially skeptical about for Monty Hall-esque reasons, but the math convinced me otherwise, and I think everybody agrees with this); whereas CDT favors two-boxing.
+</p>
+
+<p>
+That being said, there are very interesting counter-examples to EDT such as the <a href="https://www.lesswrong.com/tag/smoking-lesion">Smoking Lesion</a>. But such examples rely on EDT being misled by spurious correlations. These edge cases don't seem to apply to Newcomb's problem.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-03-21 Mon 06:32</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

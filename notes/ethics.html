@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-21 Mon 06:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ethics</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body style="background-color:#f4edd9">
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb31e421">1. Meta-ethics</a>
+<ul>
+<li><a href="#orged85e8a">1.1. Are the laws of morality as real as the law of gravity?</a></li>
+<li><a href="#orga79628f">1.2. Free-will analogy</a></li>
+<li><a href="#orgf0cb5fd">1.3. A refined notion of morality</a></li>
+<li><a href="#org192e1dd">1.4. Clarifying "Goodness" (not just desirability)</a></li>
+<li><a href="#orgc1cca05">1.5. How to we reconcile moral disagreement?</a></li>
+<li><a href="#org4fcdaf0">1.6. Moral epistemology</a></li>
+<li><a href="#org141f457">1.7. What do I mean by realism?</a></li>
+<li><a href="#org0ccc7a5">1.8. Can morality be coercive?</a></li>
+<li><a href="#org0b1af2d">1.9. A possible account of moral realism</a></li>
+<li><a href="#org95b72e0">1.10. Internal vs External accounts of morality - Why should I act morally?</a></li>
+<li><a href="#org28a08c7">1.11. Scholastic Moral Philosophy</a></li>
+<li><a href="#orgda4d2c9">1.12. Linguistic analogy</a></li>
+<li><a href="#org9f84e7f">1.13. Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</a></li>
+<li><a href="#orgbd0542e">1.14. Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</a></li>
+</ul>
+</li>
+<li><a href="#orgad9cd7a">2. Animal Ethics</a>
+<ul>
+<li><a href="#orga4f2610">2.1. Whence the value of life?</a></li>
+<li><a href="#org7004953">2.2. If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</a></li>
+</ul>
+</li>
+<li><a href="#orgd289ce7">3. Abortion</a>
+<ul>
+<li><a href="#org27e68b2">3.1. A better exposition of the "Violinist Argument"</a></li>
+<li><a href="#org97e34bf">3.2. Another formulation (Baseball Analogy)</a></li>
+<li><a href="#org6bb1ef5">3.3. Shoving a pregnant lady: A flawed pro-life thought experiment</a></li>
+<li><a href="#org4182a8d">3.4. An alternative to life at conception</a></li>
+<li><a href="#orge5d06b8">3.5. When is manslaughter punishable?</a></li>
+<li><a href="#org223b2ad">3.6. A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</a></li>
+<li><a href="#org8fc73ad">3.7. Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb31e421" class="outline-2">
+<h2 id="orgb31e421"><span class="section-number-2">1</span> Meta-ethics</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orged85e8a" class="outline-3">
+<h3 id="orged85e8a"><span class="section-number-3">1.1</span> Are the laws of morality as real as the law of gravity?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+It's not possible to disobey the law of gravity, whilst we CAN disobey laws of morality.
+NATURAL laws DESCRIBE what's possible
+MORAL   laws PRESCRIBE what one ought to do.
+</p>
+
+<p>
+NATURAL and MORAL laws are similar in their shared CATEGORICITY (applies universally irrespective of disposition)
+MORAL laws are unique in their REASON-GIVING (though we are able to disobey laws of morality, we shouldn't)
+</p>
+
+<p>
+However, we can say that MORAL laws are "just as real" as NATURAL laws, but are just of another kind. They are "just as real" in the sense of their mind-independent existence and universal applicability.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga79628f" class="outline-3">
+<h3 id="orga79628f"><span class="section-number-3">1.2</span> Free-will analogy</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The big problem with morality is the is-ought gap. We can scientifically analyze how people feel about certain moral propositions, give a full account of what is pleasurable and what is not, even generalize certain princples which are universally agreed upon. However, it's fallacious to go from simply observing these principles to declaring that we OUGHT to adhere to these principles. In other words, the REASON-GIVING nature of morality is unique to moral laws and apparently either inexplicable or fallacious.
+</p>
+
+<p>
+Maybe this reason-giving characteristic is a mistake. Like with libertarian free will, we have come to see how it is incoherent within a deterministic worldview. However, we needn't do away totally with free-will, instead we can refine our notion of free will so as to be consistent with determinism (e.g. freedom of will is the ability to act in accordance with one's desires). This alternative notion is not achieved by "grasping at straws" in order to "avoid the horrible fate of facing reality"&#x2026; Instead, we refine our notion of free-will in order to better account for the experience of free-will. The fixation on denouncing libertarian free-will doesn't actually contribute to our understanding of the experience of free-will. It is pure speculation to simply assert that it must be an illusion (what does that even mean?). To say that we must live "as if we have free-will" is just an abdication of the responsibility to properly understand free-will.
+</p>
+
+<p>
+Now, to complete the analogy with morality: Common-sense notions of morality demand that moral laws are objective, fixed, and reason-giving. As such, it is wrong to torture and rape a child; this applies equally to the child-rapist and the loving mother. This entails CATEGORICITY since all moral agents (usually just human beings, sometimes not children) are held accountable; it also entails REASON-GIVING since even the child-rapist is held to this standard in spite of his disposition towards enjoying raping children. In other words, a <b>MORAL LAW PRESCRIBES RATHER THAN AFFIRMS DESIRES</b>. Furthermore, if all humans were to disappear, we think that it would still be just as wrong to rape and torture a child (i.e. this fact would still be true, even if there were no moral agents to whom it may be applied). Additionally, it's possible that some moral law may exist which contradicts ALL of our desires, e.g. that parents OUGHT to flay their first-born and dine on his remains exactly three nights later, and we would be just as beholden to this moral law as the former, utterly agreeable one. We've arrived at a notion of morality which is totally arbitrary, which somehow "exists" outside of our minds, and applies universally irrespective of anyone's affective dispositions.
+</p>
+
+<p>
+This understanding of morality is akin to the libertarian understanding of free-will. It seems incoherent since it's not clear how one could account for the <b>coercive</b> force of such laws. What does it mean to say that we OUGHT to do something? According to whom? In accordance with whose desires? This notion of a <b>categorial imperative</b> (as opposed to an instrumental imperative, which is easily understood) is yet unaccounted for and appears incoherent. As such, many people reject morality altogether and reduce MORAL COMPULSIONS &#x2014;&gt; AFFECTIVE DISPOSITIONS (noncognitivism). That is, when one says "it's wrong to torture and rape a child" they are just saying "I don't like the idea of a child being tortured and raped; it makes me feel sad". Thus, there's no truth value to the moral proposition because it's no longer a proposition, just a declaration. In my opinion, this is a bastardization of moral experience just as was described for free-will. It's simply not a sufficient account of our experiences to say "morality is an illusion" just as it was insufficient to say "free will is an illusion." Hence, we need to refine our understanding of morality so as to retain CATEGORICITY (i.e. applies to everybody, can't just exclude one's self from moral consideration) just as we refined our understanding of free-will through compatabilism. Note, we are no longer trying to make morality COMPATIBLE with any worldview, rather we are trying to make it COHERENT without degrading it to complete relativism.
+</p>
+
+<p>
+Before this, it's worth noting that the conclusions of moral skepticism are not so drastic as I may have made them seem. This is similar to how the conclusions of the non-existence of free will were not as earth-shattering as they may have seemed at first. Indeed, there are some good reasons to reach the conclusions of moral skepticism (most defensibly embodied in <a href="https://plato.stanford.edu/entries/moral-anti-realism/moral-error-theory.html">error-theory</a>): (1) argument from disagreement (2) argument from queerness. Morality IS very queer, especially under its common-sense understanding as stated above! However, I think there are refinements we can make to our notion of morality which make it less-so queer and which better account for our experience of morality. Furthermore, I think the disagreements surrounding morality are less severe than they <i>prima facie</i> seem. In fact, I think most people (if they were capable of honest and difficult conversations) could reconcile their moral principles. The relation between these principles and specific moral prescriptions is then a disagreement on matters of fact. The few exceptions regarding their irreconcilable moral princples would simply be deemed as deficient in their moral faculties. Just like how a blind person's inability to perceive light is not a rebuke of the scientific theories of light, but rather a diagnosis of their visual faculties.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0cb5fd" class="outline-3">
+<h3 id="orgf0cb5fd"><span class="section-number-3">1.3</span> A refined notion of morality</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Finally, we are tasked with explicating this <i>refined</i> notion of morality. As previously stated, the single biggest challenge is accounting for the reason-giving nature of moral laws. To recapitulate, this means that <b>MORAL LAWS PRESCRIBE RATHER THAN MERELY AFFIRM DESIRES</b>. As such, when we say that "honesty is good," we mean that everybody OUGHT to have the desire to be honest. It's not clear what the operative word "OUGHT" actually means, though. It's sometimes contended that this is just a problem for naturalists, but it's not. Consider the following attempts at reconciliation: (1) Under theism, ought means "in accordance with God's will" (2) Under Aristotelian metaphysics, ought means "in accordance with the <b>essence</b> of man." Neither of these views offer any clarity on the meaning of OUGHT since they arbitrarily defer its force to some other notion as well. Why OUGHT I act in accordance with God's will? Why OUGHT I act in accordance with my essence? What if I desire to do otherwise? Of what form does this compulsion to remedy my desires take? If it's contended that I need not remedy my desires but simply defer my actions to this ultimate source, the question persists: Why should I act contrary to my desires when I'm not compelled by necessity?
+</p>
+
+<p>
+The answer is that one must be compelled by reason in accordance with one's desires. This is because there appears to be no coherent way of imposing desires on others without defering to some other desire (e.g. the desire to please God or fulfill one's essence). As such, reason must guide one's actions in relation to one's desires. This seems to be the only coherent way to construct imperatives. Note, this is suspisciously reminiscent of instrumental imperatives, where OUGHT is defined in relation to some explicit goal (e.g. one ought to exercise and eat healthy in order to lose weight). Here, we are doing something similar, but stating <i>a priori</i> that everybody shares the goal of fulfilling their desires. This notion is tautologically unassailable and it derives from an analysis of the untenability of the common-sense notion of morality as reason-giving. As explored above, to say that we OUGHT to act in any way other than in accordance with our desires is incoherent.
+</p>
+
+<p>
+Thus, we've bridged across the is-ought gap. So now, <b>one OUGHT to do X</b> is equivalent to <b>doing X is most in accordance with one's desires</b>. Defending the latter requires "simply" defending matters of fact. We need to know (1) What are a person's genuine desires? and (2) How best are they facilitated? These are difficult questions, no doubt, but they are no longer questions of morality. Instead, they are questions of "science" broadly understood. For example, we can explore our genuine desires through introspection, scientific examination, historical consideration, anthropological analysis, etc. Then, answering how they are best facilitated is a question for political analysis, sociological examination, technological consideration, etc. In doing so, we will also need to consider how to reconcile conflicting desires, exacerbated within pluralistic societies, which is no simple task. Additionally, we may formulate such notions as "human rights" and "social contracts" and "familial responsibility" and so on. These may no doubt be very important concepts, but they are ultimately (in theory) reducible to base desires (which is 1) and pragmatic considerations (which is 2).
+</p>
+
+<p>
+So, we've done it&#x2026; we've solved morality, right? Well, kind of&#x2026; I've offered a meta-ethical view which partially accounts for the nature of GOODNESS (viz. outcomes in accordance with one's genuine desires) and clarifies the notion of OUGHT in moral propositions (viz. one ought to act in accordance with one's desires). What remains to be demonstrated are (1) our genuine desires and (2) the means by which these desires are facilitated. The former is the task of every morally conscious individual and the latter constitutes a <b>normative ethical frameworks</b> to be adopted by society at large. Attempts at explicating our desires are abundant and multifaceted, trying to holistically account for our entire psychology&#x2014;a task inconceivably beyond even the wisdom of generations. Nevertheless, that's not to say we've not made progress (e.g. abolishing slavery), merely to say we're not done yet and almost definitely never will be. Regarding (2), we've constructed lots of normative frameworks, attempting to codify the achievement of our desires ranging from strictly ethical (e.g. utilitarianism, social contract theory, Christianity) to political (e.g. Rawls' theory of justice, socialism, feminism). It's no easy task choosing from among these the most efficacious. Indeed, this is the perennial task of humanity.
+</p>
+
+<p>
+The point of this paper is not to recommend one system over another, but rather to defend the very task of formulating such systems themselves. That is, I've attempted to defend the notion that there is something <b>REAL</b> which these frameworks inevitably seek; that the moral lenses through which these worldviews scrutinize humanity are not merely illusory and that there is some sense in pursuing such notions as goodness and justice. Furthermore, I aim to combat the spread of moral nihilism and the widespread resignation surrounding the utter meaninglessness and relativity of morality.
+</p>
+
+<p>
+<b>A note on DESIRE</b>: When I say that somebody ought to act in accordance with their genuine desires, I'm acknowledging that most people, a lot of the time don't do so. This is because we are not omnipotent. We don't always know all of our desires and we certainly are not perfectly rational. We often let our judgment be clouded by emotions and end up making sub-optimal decisions. So, to act in accordance with one's genuine desires is to do what I've outline above: (1) to firstly explore what one's desires actually are and (2) to pursue a system which best facilitates these desires. As noted, this is by no means an easy task. Furthermore, to act in accordance with one's desires is not to act selfishly either. Even if all of one's desires are concerned with one's own well-being, it doesn't follow that his aim is selfish. For example, if one desires not to be murdered, it's in his best interest to not murder others lest he be killed himself. This is the means by which reason can guide morality in accordance with one's desires.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org192e1dd" class="outline-3">
+<h3 id="org192e1dd"><span class="section-number-3">1.4</span> Clarifying "Goodness" (not just desirability)</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+So far, I've often appealed to some higher notion of "genuine desirability" vs "mere desirability". In this distinction, I intend to highlight the difference between the conscious, psychological experience of "desirable" vs the claim that something is in accordance with one's fundamental, intrinsic understanding of Good. The former can be ascertained by simply asking someone "do you desire X?" and listening to the response. Whereas, the latter may be in disagreement with this former understanding.
+</p>
+
+<p>
+For example, consider the following question: "Is exercising in accordance with your desires?" Many people would probably say no. This is because they don't find exercising enjoyable (i.e. pleasurable when experienced). However, if you were to ask them "Is physical health in accordance with your desires?" many of the same people would respond affirmatively. We could then contend: "In order to achieve physical health, exercise is necessary." If we could convince someone of this latter proposition, then it would follow that a "desire" for physical health entails a "desire" for exercise. Of course, we are no longer speaking of the psychological notion of desire, rather the ethical notion of desire, so called "genuine desire." In other words, by an action being "genuinely desirable" I mean that by the <b>thrust of reason</b> (and potentially provided with more knowledge, e.g. that physical health is achieved via exercise), the Goodness of this action may be revealed to you. We are thereby able to utilize the force of reason in accordance with pre-existing desires to both refine existing and develop novel desires.
+</p>
+
+<p>
+Note, it might be contended that even if one accepts that physical health requires exercise and that physical health is Good, they may not accept that exercise is Good. This is because the Goodness (i.e. desirability) of physical health may not outweigh the badness (i.e. undesirability) of exercise. This is perfectly, acceptable. This is why we need to reformulate our questions as "MOST in accordance with" rather than just "in accordance with." This reformulation accounts for the kind of ethical-calculus whose absence this objection relies upon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1cca05" class="outline-3">
+<h3 id="orgc1cca05"><span class="section-number-3">1.5</span> How to we reconcile moral disagreement?</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+When we find that two people disagree on some moral judgment, say that "abortion is wrong," we need some process by which this disagreement may be understood. The first, most immediate disagreement to rectify is that of matters of fact. For example, at how many weeks does a heartbeat appear, how many abortions are due to rape/incest, what are the costs to taxpayers, etc. Once such disagreements on matters of fact are either settled or deemed irrelevant, we must concern ourselves with disagreements on values. For example, does a fetus constitute a human life, should a woman's right to bodily autonomy preside over a fetus' right to life, etc. At such levels of disagreement, we must appeal to more fundamental values until an agreement is reached^. For example, there may be agreement that a human life is deserving of protection. At this point, we analyze the problem at hand in relation to this shared value. One may contend that a fetus fails to constitute a human life. Or they may suggest that even though a fetus constitutes a human life, its right to life is succeeded by the mother's right to bodily autonomy. We now must consider the tenability of such higher-order principles, derived from shared lower-order values. To do so, we consider their applicability in all sorts of hypothetical scenarios and test their consistency with other values/principles. For example, if one doesn't consider a fetus to constitute a human life, what about a severely mentally disabled child? Or what about a new-born child?
+</p>
+
+<p>
+We must continue such investigations, at every step testing for consistency with other principles and ultimately either concluding that our moral systems are perfectly internally consistent or else making some refinements to one's principles in order to maintain consistency. Finally, once such a consistent system is achieved, we may return to discussing matters of fact with regard to the practical applications of such principles.
+</p>
+
+<p>
+^On the other hand, there's the possibility that a shared value may never be reached. This will be due either to the inadequacy of either interlocutor in examining his/her values or to the deficiency of either interlocutor in his/her moral faculties. For example, regarding the former, an individual may simply lack the intellect to examine the values underlying his/her moral propositions, taking the propositions to be the end of the discussion. Regarding the latter, take the example of a lazy and disrespectful teenager unamenable to reasonable admonition. He has no desire to better himself or care for his mother or take on responsibility, exercise prudence, etc. Such an individual is clearly deemed to be deficient in his moral sensibilities and thereby dealt with accordingly to the discretion of and by those with moral faculties.
+</p>
+
+<p>
+How do we know when we've reached a fundamental value, rather than having simply stopped upon some higher-order belief? A value must be self-evident and unassailable. It is not up for contention and to deny its validity would be to accept moral deficiency in the eyes of those who hold it to be a value. This is as far as we may go regarding the nature of such values. They are not justifiable except in so far as they may be used in defense of shared higher-order principles. It is helpful to consider the analogy of vision here: some people are simply blind, totally incapable of sight. Their deficiency is not to be taken as a refutation of the existence of light, rather as a diagnosis of their impairment. This ultimately arbitrary distinction is founded in the virtual uniformity of sight. Though we have no genuine justification for calling one "real" and the other a disorder, we accept this as a practical necessity. Similarly, we should do so for morality given the near uniformity (among other things) of basic moral truisms (e.g. that senseless torture and murder is wrong).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fcdaf0" class="outline-3">
+<h3 id="org4fcdaf0"><span class="section-number-3">1.6</span> Moral epistemology</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+How do we ascertain moral knowledge? Given some moral proposition, by what means do we measure its truth value?
+</p>
+
+<p>
+It's tempting here to conflate our moral epistemology with our moral ontology. For example, if we say that our morality is founded in evolutionary developments and its structure resides within the brain, it's tempting to argue for moral propositions by appealing to these foundations. Doing so can sometimes be fruitful, though it's also incredibly susceptible to producing utterly un-agreeable conclusions. In such a case, how do we adjudicate between our moral experiences and our understanding of our moral foundations?
+</p>
+
+<p>
+I adhere to an analogy with music: when deciding whether some music sounds "good" or not, we should ULTIMATELY always appeal to our experience of the music rather than to our understanding of music theory. Even though some music may be "good" as laid out in music theory textbooks, it may not be "good" to the ears and vice versa. Ultimately, our music theory (in principle) is derived from our musical experiences, intended to abstract from the latter the principles which guide our musical understandings. To give another example, our scientific theories are derived from our natural experiences, intended to abstract from the latter the principles which govern the natural world. If our theories fail to account for some observation of the natural world, then we cannot simply disregard our observation in compliance with the theory. This is not to say that one counter-observation is capable of refuting an entire theory, of course. However, the observation must always take precedence, such that all attempts must be made to reconcile the observation with the existing theories before either discarding the observation as sufficiently untenable or doing away with / refining our theories. Completing the analogy with morality, our moral foundations are abstractions upon our moral experiences, attempting to ascertain the principles which guide our moral understandings. If there is some disagreement among the two, then our moral experience must take precedence, such that all attempts must be made to reconcile our moral understanding with our moral foundations before either discarding our moral experience as fallacious or refining our moral foundations.
+</p>
+
+<p>
+This is the dialectic which must be perennially endeavored by any individual of moral disposition.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org141f457" class="outline-3">
+<h3 id="org141f457"><span class="section-number-3">1.7</span> What do I mean by realism?</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+TL;DR - I contend that there exist intrinsic, universal (except for the morally deficient) values which all people hold (whether they know it or not) and whose truth-value is irrespective of anybody's affective disposition (ref. Can morality be coercive?)
+</p>
+
+<p>
+With all that I've said, it's tempting to say that I've not really defended morality, much less defended its reality. It may seem that I've simply redefined morality to be whatever I want and then recommended its pursuit. In what sense is this real?
+</p>
+
+<p>
+Firstly, I've not arbitrarily redefined morality to fit my whims. Rather, I've analyzed the conceptual problems with morality as commonly understood and proposed a <i>refined</i> notion of morality which eschews the incoherence of the former notion. Secondly, morality is real in the sense that our desires are real. By moral realism, I mean simply that moral propositions have a truth value which is not always false, i.e. that they are either in accordance with one's desires or not. This is as rich a sense of <b>real</b> as anything else.
+</p>
+
+<p>
+It's not as "real" as the objective, mind-independent, reason-giving coercions of common-sense morality because such a notion is incoherent (as explained earlier). Similarly, compatilist notions of free-will are not as "real" as the libertarian notion of free-will because such a notion is likewise incoherent. Ultimately, "real" is an <b>honorific</b> term. We say that something is "real" when it comports with some explanatory theory.
+</p>
+
+<p>
+For example, is the color red real? It certainly is real within the domain of human experience. But is it real to a blind person? Yes, they just lack the requiste faculties to perceive it. Is red real within the domain of physics? Well&#x2026; there is a wavelength of light which is associated with the color. But, there's no conception of the qualia red within the language of physics.
+</p>
+
+<p>
+Similarly, we may ask: Is morality real? It certainly is real within the domain of human experience. We experience desires and compulsions to act a certain way all the time. Is real to a sociopath? Yes, they just lack the requisite faculties to perceive it. Is morality real within the domain of biology? Well&#x2026; we can study the anatomical structures within the brain associated with desire and (in princple) we could even deduce the means by which desire is translated into action. But, there's no conception of a moral imperative within the language of biology.
+</p>
+
+<p>
+When we ask whether something is real or not, we have to specify the explanatory model with respect to which something can be considered real. As far as I've demonstrated, morality is as real as the color red.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ccc7a5" class="outline-3">
+<h3 id="org0ccc7a5"><span class="section-number-3">1.8</span> Can morality be coercive?</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Another way of phrasing the above question is as such: Is it possible that some moral proposition is true even though nobody in the world believes it?
+</p>
+
+<p>
+I think that the answer is yes in one sense and no in another. It's yes in the sense that everybody may be deluded and that moral truths supersede affective dispositions. It's no in the sense that we could never be justifiably privy to such a proposition. This is because our moral epistemology is restricted to our moral experiences, and so a moral proposition which nobody has experienced or only whose negation has been experienced can't every be known to be true. However, such a contention would entail the mass-delusion of everybody, which is quite implausible and bordering on nonsensical.
+</p>
+
+<p>
+The question is similar to this: Is it possible that a color exists which nobody in the world has ever seen?
+Though the answer is yes in the sense that it's possible we all may be in this way lacking in our visual faculties, the selective invisibility of this one color raises suspicions of both its nature (i.e. is it even a color?) and its plausibility.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b1af2d" class="outline-3">
+<h3 id="org0b1af2d"><span class="section-number-3">1.9</span> A possible account of moral realism</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Through anthropological data, we understand that cooperation (loaded term) is an evolutionary adaptation. We might extrapolate that there are structures in the brain associated with such behaviors. This then might be the sense in which our desires are <b>real</b> and objective. It is thus our task to ascertain these desires through any means (e.g. introspection, biological examination, psychological experimentation, etc.) and then to optimally facilitate these desires through politics, etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95b72e0" class="outline-3">
+<h3 id="org95b72e0"><span class="section-number-3">1.10</span> Internal vs External accounts of morality - Why should I act morally?</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+<a href="https://plato.stanford.edu/entries/williams-bernard/#InteExteReas">Ref: Bernard Williams</a>
+</p>
+
+<p>
+It's often contended that an internalist account of morality fails to actually meet the demands of a <i>metaphysically robust</i> moral ontology. As such, internalism is left susceptible to rabid subjectivism and ultimately fails to distinguish itself as a form of moral realism (note: not everybody skeptical of internalism goes this far). Here's the problem: how do externalist accounts of morality defend the reason-giving nature of moral propositions?
+</p>
+
+<p>
+It seems to me (as I've detailed above) that the only <i>coherent</i> way for a moral principle to codify imperatives is by appealing to pre-theoretical reasons (i.e. basic moral foundations). Outside of such pre-existing reasons, the notion of an OUGHT seems incoherent. Under externalism, though, we can't appeal to internal reasons anymore. As such, moral principles must somehow be reason-giving. I've yet to see a compelling account of this process which isn't susceptible to some refined formulation of <i>Euthyphro's Dilemma</i>. Ultimately, such an external principle ends up being coercive.
+</p>
+
+<p>
+To make my point more clear, consider some moral proposition <i>P</i>. If I already believe <i>P</i> or can convincingly demonstrate that everyone believes <i>P</i> (and therefore I do as well) then the reason to act in accordance with <i>P</i> is codified within the principle itself. To ask "why should I act morally?" is to misunderstand the nature of a moral proposition. However, if <i>P</i> exists outside of my mind then it will inevitably come into conflict with the <b>moral experiences</b> of my mind (unless it's reducible to them). In such a case, there's no apparent way to justify the thrust of <i>P</i> over my internal moral experiences without accepting it due to coercion. Any externalist account of morality is susceptible to this coercive characterization, including for example a Theistic account. The only way out of this critique is to contend that the external moral principles will <b>invariably</b> agree with my internal moral experiences after sufficient reflection. This can be done with Christianity, for example, where God has written his will in our hearts. As such, it's simply a matter of realizing the necessary identity between his will and our own goodness.
+</p>
+
+<p>
+Such a workaround is perfectly acceptable, though it then diminishes completely the thrust of the Moral Argument. Since, moral principles are still ultimately beholden to internal moral experiences (whether the principles exist internally or externally). As such, adding God or any other external explanation for the origin of such internal moral experiences is nontrivial but ultimately doesn't add any more legitimacy to their force than without them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28a08c7" class="outline-3">
+<h3 id="org28a08c7"><span class="section-number-3">1.11</span> Scholastic Moral Philosophy</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+The framework of medieval moral philosophers was to posit a dichotomy between <i>synderesis</i> and <i>conscientia</i>. The former is the natural capacity of disposition of the practical reason to apprehend intuitively the universal first principles of human actions. The latter is the application of reason to these first principles in forming higher-order normative beliefs. Importantly, <i>synderesis</i> is infallible but <i>conscientia</i> is capable of erring. Indeed, I would contend that our reason often fails us in generating the correct higher-order beliefs from our first principles. So much so that the widespread disagreement regarding higher-order beliefs (e.g. political practices) has motivated widespread skepticism regarding the first principles themselves. I think this is clearly a mistake. It's simply not appreciated that drastically different conclusions can be reached through the application of even mildly different approaches alongside usually very different matters of fact.
+</p>
+
+<p>
+Take <i>systemic racism</i> as an example. It's tempting to believe that those on different sides of the debate simply hold fundamentally different principles regarding the importance of racial equality, the tenability of racially diverse socities, the proper roles of the government in facilitating such cooperation, etc. Instead, the disagreement is really just skin-deep. It lies at the level of matters of fact and whether there is evidence that racial biases exist at a systemic level (hint: they do). Nevertheless, the opponents tend to frame their differences along much more fundamental lines, e.g. crusader of egalitarianism and liberalism vs. backward-minded racist with no concern for the lives of black people. This framing is simply factually wrong.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda4d2c9" class="outline-3">
+<h3 id="orgda4d2c9"><span class="section-number-3">1.12</span> Linguistic analogy</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+One way to think about morality is through an analogy with language. The main similarities are (1) generativity (2) innateness (3) intuition-based epistemology.
+</p>
+
+<p>
+(1) By generativity, I mean the capacity for infinitely many conclusions from finite principles. In linguistics, this takes the form of linguistic creativity, i.e. the ability to spontaneously produce novel sentences / phrases from a basic foundation of syntax and lexicon. In morality, we are able to apply our basic moral intuitions to a number of complex, moral questions. For example, take the trolly problem, which presents a novel exercise of our moral faculties. None of us have been specifically conditioned to answer such a question and yet we all have immediate and consistent moral reactions to the trolly problem, i.e. that diverting the tracks is acceptable but pushing a large man is not. A behaviorist-esque understanding of morality fails to sufficiently account for this generative aspect of moral knowledge. To take another example, consider laws. The aim of laws is to codify an infinite variety of legal / moral dilemmas into a finite set of principles. That is, we attempt to abstract the infinite types of murders into a single concept, viz. murder. This is again an example of the generativity of moral knowledge in the domain of legal prohibitions.
+</p>
+
+<p>
+(2) Despite the doubts of moral skeptics, there is much evidence for the innateness of moral knowledge. Objections that morality, like language, is just performative rule-following are dubious. Refer to Noam Chomsky regarding the existence of a universal grammar and an innate capacity for language learning. In morality, the case appears to be similar. This is buttressed by the virtual universality and immutability of many fundamental moral principles (e.g. that rape, murder, torture, lying, etc. are wrong), the immediateness and generative capacity of moral knowledge. Again, if moral knowledge were merely learned, then we would at the very least struggle in responding to novel dilemmas (like the trolly problem) and likely differ significantly in our conclusions (which we don't).
+</p>
+
+<p>
+(3) Both language and morality are most immediately ascertained via introspection. Some people will levy this as an attack against the foundations of our moral knowledge as "real." However, if we approach morality from a psychological perspective, moral intuitions offer a perfectly viable means of exploring the nature of morality in the mind. To clarify, this approach is only problematic if we attempt to justify the existence of a mind-independent morality. But, as a tool for exploring the moral sense / grammar / capacity, it's extremeley effective. In the analogy with language, this exactly how we study language. There's no problem because we acknowledge that we are studying something in the mind.
+</p>
+
+<p>
+The question persists, though: In what sense is morality real if it's not mind-independent? Here I refer to some other bullet points like "What do I mean by realism?" and "Can morality be coercive?" The main point is that the basic moral principles may be subjective in the sense that language is subjective. But this doesn't mean that all moral propositions are equally valid just like not all sentences are equally valid. Clearly there is a structure to morality like there is a structure to language, though these structures may exist within the mind. Our endeavor is therefore to best understand this structure and to explicate both its principles and conclusions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f84e7f" class="outline-3">
+<h3 id="org9f84e7f"><span class="section-number-3">1.13</span> Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+A major challenge proposed to moral realists is that of moral epistemology. Given that moral facts, if they exist, must be particularly queer, how can we claim to have knowledge about them? This objection is also sometimes phrased in terms of the is-ought distinction: given that nonmoral claims alone can never entail a moral claim, how may we come to know moral claims except by presupposition?
+</p>
+
+<p>
+It's helpful here to consider a comparison with psychological claims, such as the claim the someone is happy. It's equally true that nonpsychological claims alone never entail a psychological claim, yet we seem justified in knowing psychological claims. How so? Well the process by which we come to know psychological claims seems to parallel that of moral claims. We have personal experiences of psychological states such as happiness, and then come to observe general characteristics of others who claim to be happy (e.g. smile, physical excitement, laughing, happy for some predictable reason, etc.), corroborate these characteristics with more people as well as our own experiences and then develop a basic theory of happiness. This theory is necessarily fallible and tentative (like any scientific theory), but it works, it can even make predictions (e.g. change the circumstances and the happiness will cease, or begin). Note however that at every step, we never have direct access to the other person's psychological state. We only infer from our own experiences and this general model of nonpsychological characteristics the pyschological state of others.
+</p>
+
+<p>
+The exact same thing seems to happen with moral claims. We don't have direct access to moral facts (like psychological facts), but we infer them from personal experiences as grounded in a general explanatory theory. It's maybe tempting, onece this theory has been formulated, to then reduce the supposed moral facts to just these nonmoral facts as explicated in the explanatory theory. However, this would be fallacious reasoning. We don't infer from the fact that psychological states can (in principle) be explained in nonpsychological (i.e. scientific) terms that therefore there are no psychological states / facts. This is simply to commit a fallacy of reasoning and deny one's own experience because <i>reductive</i> scientific accounts <i>seem</i> more "objective."
+</p>
+
+<p>
+Ultimately, we commit the is-ought fallacy all the time. It's a necessary component of explaining phenomena, since we can't appeal to the phenomena directly in attempting to explain them (that would be circular).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd0542e" class="outline-3">
+<h3 id="orgbd0542e"><span class="section-number-3">1.14</span> Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+<a href="https://youtu.be/uxZ-6yUtQ3o?t=3550">Source</a> [59:10 - 1:10:46]
+</p>
+
+<p>
+<b>In moral philosophy, a lot of philosophers talk about the notion of <i>normativity</i>. Can we and how should we bridge the gap between moral psychology and normative ethics?</b>
+</p>
+
+<p>
+A substantial part of my book was devoted to answering that question and the basic idea which I tried to elaborate was one which Rawls first articulated, which attempts to bridge the gap between descriptive moral psychology and normative moral philosophy. Rawls' notion is was he called <i>reflective equilibrium</i>. I tried to argue in my book that many philosophers got Rawls wrong when they failed to see the substantial role that descriptive moral psychology plays in his notion of <i>reflective equilibrium</i>.
+</p>
+
+<p>
+Rawls coined the term as a way to describe what an older literature, going back to what Nelson Goodman and others, had written about the <i>problem of induction</i>. The same kind of normativity question can arise in the problem of induction. When we theorize about induction, are we trying to <b>justify</b> inductive inferences or just <b>describe</b> the way that people actually make inductive inferences? Goodman argued in his book <i>Fact, Fiction, and Forecast</i> that although the tradition had cast David Hume in a bad light for confusing the two questions, in fact Goodman's view was that philosophers owed what he called a "belated apology" to Hume. This is because in describing instances of sound inductive inference, Hume was in fact explicating what sound inductive inference <b>ought</b> to be, in the normative sense.
+</p>
+
+<p>
+Rawls was quite right to see that something similar goes on in the case of moral philosophy. He understood that in fact it's true that virtually every moral philosopher who engages in normative theorizing at one point or another relies upon <b>moral intuitions</b> to either validate or falsify the normative theory. In other words, there's no moral theorizing without moral intuitions. In light of that, we ought to go ahead and describe and explain those moral intuitions to the best of our abilities. When done in the right way&#x2014;and this is the connection to the case of induction&#x2014;that is, if we explicate what Rawls called "considered judgment" (as opposed to just any old moral judgment), the result of our efforts will be a theory that is simultaneously <b>descriptively adequate</b> and <b>normatively adequate</b>. Why? Partly because these "considered judgments" are the ones that pre-theoretically we think are normatively sound. We begin with judgments in which we have a high degree of confidence. Rawls used as an example the judgments that exemplify the principle that racial discrimination is unjust. We then try to explicate the deeper principles behind such a judgment. So, if our set of judgments which we're trying to explain are themselves already normatively laden and we're able to state in an adequate way the principles from which those judgments derive and upon reflection, once we've pruned both the principles and the judgments, we've arrived at a stable state of affairs, i.e. where we feel that both the principles and the judgments are correct, we will reach what Rawls called a state of <b>reflective equilibrium</b>. Once having achieved this point&#x2014;after having scrutinized these principles and considered all the criticism from the social sciences, history, economics, and any other number of critical endeavors&#x2014;if we still affirm the judgments and the principles even after this process, the question presents itself: What more do you want? You now have a theory of moral judgment that (1) is descriptively adequate in the sense that it purports to be describing the actual operation of moral competence (2) explains what you already took to be the sound moral judgments (3) has been subjected to the maximum criticism of facts and logic. The result seems to be a theory which is normatively adequate. In other words, you are justified in holding those judgments and principles. Additionally, you might furthermore link all of this to a theory of human nature, so that the principles are not just adventitious (i.e. happened to have been internalized from your environment) but are actually a deep reflection of innate human nature. At that point, moral skepticism and its perennial worries which beset moral theorizing begins to lose its force. If you can show that this system that is both descriptively as well as normatively adequate and can also justify commonly held human rights norms which transcend cultural relativism, the question persists: What are you seeking that this theory doesn't provide?
+</p>
+
+<p>
+One potentially lingering desideratum is for this theory to describe <b>objective mind-independent moral reality</b>. The entire theory is located within the head whilst buttressed by an external theory of justification for why these are sound moral principles to maintain. However, the theory is not <i>metaphysically ambitious</i> in the way that a robust metaphysical realist might demand. As such, that may be a cost of the theory in some people's eyes. In my view, it's not a cost but rather a virtue. I think history should have persuaded us by now to realize that the more robust theory is probably not achievable but that this alternative may satisfy any reasonable demand of a normative ethical theory.
+</p>
+
+<p>
+Notably, we are not relegated to total subjectivity. We do still maintain a kind of mind-dependent objectivity. As an analogy, consider the Euclidean character of physical space as we perceive it through our visual apparatus. That's not metaphysically real in the sense that scientists don't consider it to be actually true of the nature of physical space. It's mind-dependent but it's substantially objective with regard to how we perceive space. That's nontrivial and actually rather ambitious in relation to the philosophical tradition. It just refuses to transcend the limits of scientific epistemology.
+</p>
+
+<p>
+As another example, take color perception. It's not clear what it would even mean to say that colors are an objectively mind-independent facet of reality. Nevertheless, we don't groan over the "illusory" status of colors. They are taken to be real in a fundamental and important way. Indeed, everyone universally agrees that a shirt is "blue" or "red" and this characteristic is taken to be <i>real</i> in a meaningful sense. If moral perceptions and the properties that we intuitively and spontaneously posit regarding human actions are mind-dependent in this same way as colors, then what is the problem? It doesn't make moral facts any less real than facts regarding color perception. If moral knowledge fails to satisfy some epistemological standard for which even something as basic as colors are unknowable, then that's reason to doubt the validity of the standard rather than to persist in our untenable skepticism. We should be happy, not regretful, if moral facts and properties and notions of justice turn out to be as real as colors or as real as the apparently Euclidean nature of physical space.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad9cd7a" class="outline-2">
+<h2 id="orgad9cd7a"><span class="section-number-2">2</span> Animal Ethics</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga4f2610" class="outline-3">
+<h3 id="orga4f2610"><span class="section-number-3">2.1</span> Whence the value of life?</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+I don't think life is <b>intrinsically valuable</b>. That is, I don't think that <i>just because</i> some being is alive that it therefore is deserving of moral consideration. This view is strongly in tension with the ubiquitous appeals to so-called <b>human rights</b> in ethical and political discourse. Indeed, I think such notions as the <i>right to life</i> are ultimately indefensible, except possibly as heuristics within an ethical framework which doesn't appeal to life as being intrinsically valuable. A number of considerations pull me in the direction of this conclusion:
+</p>
+
+<p>
+<span class="underline">1. Abortion</span>
+A fetus is unequivocally alive by any sensible definition of the term (in the same way that an amoeba, a giraffe, and an adult human are all alive); and a fetus also unequivocally belongs to the human species (it is the offspring of two human beings). Therefore, a fetus is unequivocally a <b>human life</b>. If we grant that <i>all human life is intrinsically valuable</i>, then the case for abortion is annihilated. YET, the conclusions seem strongly counterintuitive, since we would never choose to save even 100 petri dishes of fertilized human eggs over just a single crying baby (and rightfully so, it seems).
+</p>
+
+<p>
+So we're led to the conclusion that most of the value of, say, a human baby derives not from the fact that it is alive but something else. Indeed, when I think about other ethical scenarios where the putative source of value is merely life, I'm inevitably able to construct some alternative justification which, once brought to by attention, seems quite compelling. This fact&#x2014;in combination with the innumerable beings which are undeniably alive (like mosquitoes and parasites) but which appear strongly to not be intrinsically valuable&#x2014;forces me to identify the source of value in something other than life alone.
+</p>
+
+<p>
+<span class="underline">2. Suicide/Euthanasia</span>
+Many people are reflexively opposed to suicide as ever being a rational choice. I think a lot of this opposition stems from a view that life is not just <i>intrinsically</i> but even <i>absolutely</i> valuable; that is, no merely practical considerations (like money, effort, or emotions) can ever trump the value of life. Another way of saying that X is both <i>intrinsically</i> and <i>absolutely</i> valuable is to say that one has a right to X; hence the <b>right to life</b>.
+</p>
+
+<p>
+Now, while I'm against suicide in most circumstances, it is usually because of practical reasons; i.e., it would severely harm to surviving loved ones (especially dependents like children) and because there seem to be relatively successful ways to alleviate the suffering in a timely manner (so it's bad to make a permanent decision over a temporary feeling). Even still, I find it difficult to justify intervening in the case of a person who's of perfectly sound mind and has understandable reasons to want to die, forcing him to live (against his will and in violation of his bodily autonomy) simply for the sake of practical considerations like the sadness of others. Ultimately, for most people, the question of suicide involves a conflict of rights (one's own life vs one's own bodily autonomy) and they usually defer to life; whereas, for me, the question of suicide involves only a conflict of one's own right to bodily autonomy vs the practical considerations of other people, in which case rights always trump practical considerations.
+</p>
+
+<p>
+Whilst defending suicide in general is quite controversial, the special case of euthanasia (assisted suicide of, generally very old people, because of some debilitating medical condition) is more widely accepted. In reflecting on euthanasia, I think people's attitudes towards the so-called <i>sanctity</i> of life really shine through; are they like me, where life is just one practical consideration among others? or do they think that life is an inalienable right, to be protected at all costs? The case of euthanasia, in my opinion, highlights the contingency (as opposed to absoluteness) of life's value.
+</p>
+
+<p>
+(Note: The question of suicide depends on a lot more than just one's attitude towards the value of life. Namely, suicide is peculiar in the sense that&#x2014;even if we grant life the status of a right&#x2014;it involves the conflict of a single person's rights. In such an instance, it seems very difficult to say that bodily autonomy shouldn't win out over anything else, since rights are meant to protect the rights-holder, and so it seems strange to, in effect, wield a person's right to life against themselves.)
+</p>
+
+<p>
+<span class="underline">3. Death Penalty</span>
+Many people are opposed to the death penalty because they believe it to be too harsh: "How is the state not just as guilty as the murderer whom it kills?" Personally, I'm ambivalent about the morality of the death penalty in principle; but I'm against it for practical reasons like cost and the possibility of false conviction.
+</p>
+
+<p>
+What really confuses me about people's attitude towards the death penalty, though, is that so many people view it as worse than a life sentence without parole. Personally, I would much rather be killed than be forced to live in a dingy cell for the rest of my life, with no opportunity for edification or basically anything. But, like in the case of suicide, I guess some people are <i>absolutists</i> about the value of life. For myself, reflecting on the preferability of death to a life in prison helped move me away from that stance.
+</p>
+
+<p>
+<span class="underline">4. Animal Rights</span>
+Similarly to my reflections on abortion, I realized that there are all sorts of animals which I don't consider to be intrinsically valuable (like mosquitoes and parasites). Moreover, I realized that even in cases where I seemed to appeal to the intrinsic value of an animal, there would more plausible alternative explanations:
+</p>
+
+<p>
+Take the instance of a that twitch streamer who "joked" about deliberately killing somebody's pet while working as a veterinarian. Although reflexively people might think that her behavior was bad because of the harm done to the pet (thereby appealing to the pet's <i>right to life</i>), I think a much more plausible explanation is this: A veterinarian (like any doctor) has a duty to never do harm to their patients, and a pet owner willingly exposes both themselves and their pet to vulnerability under the expectation that the veterinarian will uphold this responsibility; the twitch streamer violated this trust when she deliberately killed somebody's pet whilst acting as a veterinarian. THIS is why what she did was so wrong; appeals to the <i>intrinsic value</i> of the pet and so on are just red herrings, especially when coming from meat eaters (◔_◔)
+</p>
+
+<p>
+As another example, consider the putative obligation of a pet owner to take care of their own pet (like feeding, housing, medicine, and so on). Where does this obligation come from? An easy answer is to say that the pet is <i>intrinsically valuable</i> and that the pet owner took on a special responsibility for protecting this value when they took ownership of the pet. The benefit of such an explanation is that it identifies the source of the value in the pet itself, rather than in its relationship to the owner. Therefore, if the pet transfers owners, or especially if it has no owner, it's very easy to explain why we nevertheless have an obligation to care for the animal. (After all, is it okay to harm a stray cat for fun? Is an orphan or abused child less valuable than a loved child?) Unfortunately, this benefit is also a detriment of the explanation which appeals to so-called <i>intrinsic value</i>. First of all, it fails to account for the active role which relationships play in generating value. I think a pet really is more valuable after it has belonged to a family for 10 years than when it was first adopted; the countless memories and so on all contain real sentimental (and even potentially economic) value which wasn't present at first. Secondly, &#x2026;
+</p>
+
+<p>
+<span class="underline">Conclusion:</span>
+All in all, life seems like a pretty bad source of value. So what about <b>sentience</b> instead? This is, I think, a much better source of value, and unfortunately for meat eaters, it pretty successfully secures the rights of most livestock, so it's really worth engaging with. Personally, I haven't thought much about it yet, but I think the main question would be whether even sentience is <i>intrinsically valuable</i> or whether it's merely a necessary (not sufficient) condition for developing whatever is the true source of value, e.g., relationships, social contracts, expectations / promises / deals (see my writing about the source of our obligations to our own pets above).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7004953" class="outline-3">
+<h3 id="org7004953"><span class="section-number-3">2.2</span> If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</h3>
+</div>
+</div>
+<div id="outline-container-orgd289ce7" class="outline-2">
+<h2 id="orgd289ce7"><span class="section-number-2">3</span> Abortion</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org27e68b2" class="outline-3">
+<h3 id="org27e68b2"><span class="section-number-3">3.1</span> A better exposition of the "Violinist Argument"</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Say you are an individual with a known cardiac issue. You consensually and wilfully choose to drive your car for pleasure / work, with the awareness that you may suffer a heart attack and subsequently be hospitalized along with another person hit by your car. Consequently, you are hooked up to the other person such that their life depends on your connection to them.
+</p>
+
+<p>
+Do you then have the right to unhook yourself from them? Even if you do, are you then just let off scott-free? Surely you should face at the very least manslaughter charges if not murder, no?
+</p>
+
+<p>
+In the analogy to abortion, take a person who wilfully and consensually engages in sexual intercourse with the prior awareness that they may consequently become pregnant. As such, do they have the right to perform an abortion, i.e. "unhook themselves" from their baby? Even if they do, is there not some sort of culpability? At least manslaughter?
+</p>
+
+<p>
+After all, even if we accept that the person's bodily autonomy trumps the right to life of the baby (thus justifying their right to unhook themselves), a life was ultimately lost due to that person's negligence. Surely there ought to be some culpability here&#x2026;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97e34bf" class="outline-3">
+<h3 id="org97e34bf"><span class="section-number-3">3.2</span> Another formulation (Baseball Analogy)</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Say two adults, Alice and Bob, are playing baseball in a field. They've taken some reasonable precautions: not too windy, facing away from any people, in a relatively secluded area, etc. In the course of playing (which has hitherto been inconsequential), the ball at one point inadvertently diverges from its intended path and hits Charlie, somebody walking in the park. This was entirely unintentional and unexpected and reasonable measures were taken to prevent it from happening. Nevertheless, Charlie is taken to the hospital and given a potentially fatal diagnosis.
+</p>
+
+<p>
+Dilemma: Charlie can be saved iff somebody subjects themself to struggles which are analogous to pregnancy (i.e. restricted bodily autonomy + significant pains for around nine months). Does the hospital have the right to force either Alice or Bob to undergo this sacrifice for the protection of Charlie's life?
+</p>
+
+<p>
+It seems that most people would respond in the negative to this question. This is in accordance with the pro-choice position. However, most people would also feel that Alice and Bob (or maybe just the batter) are in some way responsible for Charlie's subsequent death and thereby must be held accountable. Under US federal law, this would entail manslaughter charges. Yet, we don't charge women who get abortions with anything. Instead, we actually encourage women to consider abortion as a live option as opposed to considering it as a fatal last resort. What's the meaningful difference?
+</p>
+
+<p>
+It could be argued that in the baseball scenario, Alice and Bob are actually more innocent than a woman who gets an abortion since they were less aware of the potential consequences of their actions. After all, how many people consider the possibility that they might inadvertently kill someone by playing baseball? Furthermore, we might classify the baseball scenario as a "freak accident" such that the responsibility of the outcome is attributed either largely or wholly to chance, i.e. Alice and Bob couldn't reasonably have foreseen these consequences. On the other hand, sexual intercourse is quite directly related to pregnancy. In this case, it's much easier to assign responsibility (not necessarily blame) to the sexual participants since they knew what the risks were. If we consider the case where contraception is used but fails, resulting in a pregnancy, then we are closer to the baseball scenario, perhaps even beyond it. (We would need to weigh the foreseeability of contraception failing versus the foreseeability of inadvertently fatally wounding someone whilst playing baseball.) Even if the former is less likely, it's difficult to see how that totally acquits the participants from responsibility. In trying to develop a truly analogous scenario, we would need to consider increasingly complicated scenarios more and more resembling a freak accident, for which no one is assigned responsibility and the proper response is mourning rather than punishment. Consider the scenario where somebody falls over in their home, inadvertently launching a sharp projectile into the air and fatally wounding (like in the baseball scenario) a loved one. It seems cruel to even consider punishing this person rather than to mourn their loss with them over such a freak accident. Ultimately, the issue of abortion takes on a case-by-case consideration of placing it somewhere between these two ends (freak accident vs. foreseeable consequence) and making a judgment accordingly. Regardless, most cases of abortion (i.e. promiscuous sex followed by regret) don't seem to provide sufficient reasons for acquittal.
+</p>
+
+<p>
+A note on inequality of responsibility: In each case (i.e. baseball or sex) we have two participants engaging in an action which results in some situation such that another person's life is dependent upon only one of the participants' sacrifice. In sex, it's the mother's sacrifice, and in baseball it's either Alice or Bob's (presumably the batter's) sacrifice. There is something to be said about the unavoidable unfairness of this setup, though it's not clear what force it has on the morality of abortion. Rather, it seems to be an argument for considering the mother's desires more importantly than the father's.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bb1ef5" class="outline-3">
+<h3 id="org6bb1ef5"><span class="section-number-3">3.3</span> Shoving a pregnant lady: A flawed pro-life thought experiment</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Consider a scenario in which a man walking on the street is in a hurry and shoves past a pregnant woman. In doing so, he inadvertently causes her to fall down on top of her baby, resulting in a miscarriage. The man is tremendously apologetic and regretful. Nevertheless, most people would say the man is responsible for the baby's death and should be charged accordingly. Why in this case do we consider the life of the baby meaningful but not in the case of abortion?
+</p>
+
+<p>
+One might respond that in the case of abortion, the mother is choosing for herself to terminate the pregnancy, whereas in this scenario it is being forced upon her. This is a fair response. However, if that is the sole defense, then what we are really concerned with is the right to choose of the mother rather than the right to life of the baby, right? Well, not really. We would say that our dissatisfaction is proportional to the value which the mother placed on the pregnancy (which is presumably greater than zero since she hasn't terminated it herself).
+</p>
+
+<p>
+For example, it's bad to shove a woman, resulting in her dropping the cup of coffee in her hand. However, it's much worse to shove a woman, resulting in her dropping the priceless heirloom passed down from generations in her hand. We don't necessarily place much value on the heirloom (since it has no sentimental relation to us), but we recognize the immense value which was deprived from the woman without her consent. Likewise, our outrage when the pregnant lady was shoved is not necessarily a recognition of the life of the baby but potentially just a recognition of the immense value which the mother gave to her pregnancy and subsequently the great value which was lost without her consent.
+</p>
+
+<p>
+So, this objection fails to establish a moral inconsistency for the person who seriously objects to shoving a pregnant lady but not to abortion, since one can object to the shoving without granting any moral consideration to the fetus whatsoever. Nevertheless, it would be strange to believe that the shover should be charged with murder/manslaughter&#x2014;rather than something like "causing great bodily harm" or "causing great psychological distress"&#x2014;unless one also believes that the fetus should be granted moral consideration, in which case the immorality of abortion straightforwardly follows.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4182a8d" class="outline-3">
+<h3 id="org4182a8d"><span class="section-number-3">3.4</span> An alternative to life at conception</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+The "violinist argument" presupposes that the baby constitutes a life. This is, however, quite a difficult claim to justify. Instead, we may say that the fetus (at conception) has yet to constitute a life, but that under normal circumstances, it will in a predicatable way develop into what is unequivocally a life. Under what circumstances is an action which interferes with this natural process (to the extent of preventing the life) justified? More pressingly, does abortion satisfy these criteria?
+</p>
+
+<p>
+We can easily refine the above formulation of the violinist argument to say that the other person is actually comatose (but for a predictable period of time, say nine months) and that they will regain life so long as you are hooked up to them. If you unhook yourself before this period of time elapses, the other person will most definitely die. To be more realistic, perhaps in the very late stages (say the last month) you may be substituted with some machine such that the other person will still be revitalized (i.e. viability outside of the womb). Nonetheless, you must stay hooked up for those first eight months.
+</p>
+
+<p>
+Do you have the right to unplug yourself? The answer seems still to be clearly no. Or at the very least even if you do (since your bodily autonomy may trump their right to life), is there no repercussions for you? It seems uncompelling to say that the psychological damage is sufficient repercussions. We certainly wouldn't accept that defense for any other case of manslaughter. Though, perhaps if you would allow that in other cases of manslaughter, then your position is at least consistent.
+</p>
+
+<p>
+For example, a strict utilitarian might argue that freak accidents resulting in manslaughter should not result in the imprisonment of the perpetrator since it doesn't actually prevent any future crimes (since it was by supposition a freak accident, and thus not preventable) and is therefore merely vindictive. On the other hand, a rule utilitarian analysis may reveal that the prospect of leaving crimes unpunished is in the long run more damaging still. This is simply something to consider&#x2026;
+</p>
+
+<p>
+At the end of the day, we've shown that allowing manslaughter in the case of abortion at the very least potentially leads to the adoption (if one is morally consistent) of a number of other dubious prescriptions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5d06b8" class="outline-3">
+<h3 id="orge5d06b8"><span class="section-number-3">3.5</span> When is manslaughter punishable?</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Say a father is playing with his 5 month old daughter by lightly throwing her up and down, somersaulting, running around, etc. In a momentary act of carelessness, the father slips and the daughter is dropped. Despite the father's best efforts to be careful and his subsequent rush to the hospital, the daughter dies. A tragic case of manslaughter&#x2026; Should the father face repercussions?
+</p>
+
+<p>
+Most reasonable people would respond with an emphatic NO! The poor father has faced enough tragedy and distress, what use is there in punishing him further? Will not his embarrassment and guilt plague him eternally already?
+</p>
+
+<p>
+Indeed, I think such a response is perfectly reasonable. Why then don't I apply this standard to my formulations of the violinist argument above (cardiac arrest + baseball), such that neither the driver nor baseball players ought to be punished (either with manslaughter charges or being forced to hook themselves up) for an accident which they deeply regret?
+</p>
+
+<p>
+This story fails is disanalogous to my violinist formulations for a number of reasons: (1) Firstly, the father had no chance to actually save the baby. His act of carelessness irrevocabally killed his own daughter. If he had been given the chance to sacrifice his bodily autonomy for some period of time in order to even potentially revive her, he would at the very least seriously consider it. (2) Secondly, the death of the daughter could be argued to be an unforseeable consequence, against which the father took sufficient precautions. This is a much harder point to defend, but it's certainly less predicatable than the consequence of pregnancy following unprotected sexual intercourse.
+</p>
+
+<p>
+This latter point encourages us to consider a potential threshold of reasonble preliminary measures taken to avoid some consequence, i.e. pregnancy. In the extreme, if we take the example of spontaneous impregnantion, it's much easier to defend abortion, i.e. unhooking one's self. This is because some notion of "responsibility" can no longer be attributed to the now pregnant person. (Just imagine a world in which all girls, once they reach the age of puberty, have some nontrivial likelihood of being spontaneously impregnated at every moment for the rest of their life. Could we really outlaw abortion? Maybe&#x2026;I imagine that society would be structured in a way that's much more conducive to unplanned pregnancies, and women would probably just come to accept that spontaneous pregnancy is an unavoidable part of life. So maybe killing the baby would still be seen as an unacceptable way to eschew natural responsibilities.) Or more seriously, take the case of rape, in which case the victim clearly is not responsible for the crime perpetrated against them. That responsibility lies on the rapist themself. On the other hand, if someone is entirely cognisant of the consequences of their sexual intercourse and is even desiring to become pregnant&#x2014;with the sole intention of subsequently getting an abortion&#x2014;then it's very easy to condemn this behavior as immoral. As such, we should take seriously the extent to which "moral responsibility" can really be ascribed to the individual and factor this into our evaluation of the legitimacy of repercussions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org223b2ad" class="outline-3">
+<h3 id="org223b2ad"><span class="section-number-3">3.6</span> A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Consider the example of a pupil who admires his tutor and desires to be closer to him. The pupil is so enamored with his tutor and so determined to seek his guidance that he is willing to enslave himself to his tutor. So, he offers himself and the tutor accepts. As time goes on, the pupil grows discontent with his state of affairs. He doesn't feel that he has learned what he was hoping to learn and now harbors a growing resentment for his tutor. He wants out&#x2026; Let's say the enslavement was just temporary and that he is half-way done already. Does the pupil have the right to retroactively revoke his consent and demand his freedom?
+</p>
+
+<p>
+If we say no, then are we not denying the pupil his universal, unalieanble human rights? Surely, that seems immoral. And yet, he did consent to it&#x2026; right? On the other hand, if we say yes, then what was the nature of his initial consent? Note that this is very different from any other act of consent, which can be coherently understood to be tentative and always open to revision. In this case, the pupil seemed to actually consent to giving up his ability to consent (in the form of enslavement). As such, it would seem that he doesn't actually have the ability to revoke his consent any longer since he "volunatarily" gave that up.
+</p>
+
+<p>
+This reveals a paradox. It seems that one cannot coherently consent to giving up one's ability to consent. The canonical formulation of this is to say that rights are unalienable. As such, one is logically incapable of alieanting even oneself from these rights. I'd like to explore alternative formulations for such an ethical paradigm (other than human rights).
+</p>
+
+<p>
+In relation to abortion, this paradox counteracts the very possibility of "voluntarily" becoming pregnant. This is because pregnancy is by its very nature an infringement upon the bodily autonomy of the individual. As such, one cannot voluntarily infringe upon themselves in such a way that they give up their right to revoke consent, i.e. unhook themselves a.k.a perform an abortion. In the car example, this would mean that the doctors who hook up the driver to the pedestrian are like the tutor accepting the pupil's offer. In reality, the pupil's offer entails a paradox and so the doctors (just like the tutor) have an obligation to not hook up the driver to the pedestrian in this way (i.e. accept the pupil's offer).
+</p>
+
+<p>
+This is quite a radical conclusion, since it means that even women who are perfectly content with their pregnancies can't actually ever consent to it such that they would no longer be able to abort it if they so desired. They simply choose not to revoke consent, but the choice is their's nonetheless. As a practical matter, then, no state could ever legislate against the woman's right to an abortion, even if every woman were in favor of this legislation. That is because the women (just like anybody else) fundamentally lack the power to alienate themselves from their universal right to bodily autonomy.
+</p>
+
+<p>
+Something's missing here&#x2026; We still need to consider the opposing force in this tension: right to bodily autonomy VS. right to life. This example fails to incorporate the opposing right to life in this tension. Instead, in the pupil-tutor example, it is replaced with the lesser right to property. Interestingly, we seem to be able to recognize that the right to property is in some sense less important than the other aforementioned rights. Nonetheless, the right to bodily autonomy and the right to life appear to be of equal importance. As such, every defense of the former right equally applies to the latter right. Therefore, just as the pupil could never consistently propose such an offer, neither could the tutor accept it (not just on the basis of the pupil's right to bodily autonomy, but on his own right to life, which would be threatened if the pupil were to revoke consent).
+</p>
+
+<p>
+This is a very interesting conclusion indeed. What we've deduced is that the very relationship entailed by pregnancy constitutes an insoluble tension of rights. It's not just that the woman's right to bodily autonomy is in tension with the baby's right to life. More radically, my analysis suggests that this tension of rights exists in such way that it is actually immoral to instantiate it (since it necessarily involves the paradoxical alienation of one's own as well as another's supposedly unalieanble rights). Consequently, we are led to believe that it's immoral to become pregnant. Even when the mother is perfectly willing and indeed carries through with the pregnancy, the mere nature of this tension makes it immoral despite the beneficial outcome.
+</p>
+
+<p>
+Given this unacceptable conclusion, I'm inclined to believe that this type of analysis can be performed to reveal that many of our relationships actually entail such a paradoxical alienation of unalieanble rights. I intend to explore this further. For now, if indeed my speculation proves true, I suspect that we can resolve the paradox by appealing to some notion of mutual trust, perhaps a social contract of sorts.
+</p>
+
+<p>
+The paradox reminds me of the Prisoner's Dilemma in the sense that each individual acting self-interestedly has a unilateral preference to dissent. However, doing so entails a mutually less preferable outcome than could be achieved through cooperation. In the case of the pupil and the tutor, it's not so much cooperation but rather a mutual renunciation of rights (temporarily) which facilitates their symbiotic relationship. Of course, it also explains the pain felt by either side when the other is the lone dissenter. That is, if the mother "dissents" then she aborts the child and thus infringes on his right to life. And if the child "dissents" then he infringes upon her ability to exercise bodily autonomy by forcing her to carry him to term. Thus, while the scenario of cooperation is clearly preferable, the dilemmas posed by lone dissenters complicate the justification of said "paradoxical renunciation of rights."
+</p>
+
+<p>
+This paradox can be eschewed as long neither party actually revokes consent, though. After all, if the pupil ends up favoring his decision to enslave himself, then he never is put in a position where he has to sacrifice his right to bodily autonomy and the tutor, who's rights (either to property or to life) were dependent upon the pupil's consent, are likewise maintained. So, where's the harm done?
+</p>
+
+<p>
+Of course, another approach is to simply reject any notion of "unalienable rights" and cite such a paradox as justification of its ludicrous entailments. This seems plausible, but we must then propose an alternative system which maintains the desirable protections afforded by such conceptions as human rights. Attempting to explore any such alternatives and analyze their effectiveness would require me to recapitulate millenia of moral philosophy. Thus, I'm compelled to end the discussion here for now.
+</p>
+</div>
+</div>
+<div id="outline-container-org8fc73ad" class="outline-3">
+<h3 id="org8fc73ad"><span class="section-number-3">3.7</span> Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+My general weapon in attacking abortion has been the <b>responsibility</b> of both parents who engage in sexual reproduction for the resulting pregnancy. As acknowledged before, the burden of this responbility is unfortunately placed disproportionately upon the mother due to an unavoidable biological fact; but morally speaking, both parents should be equally responsible for the pregnancy. The effect of this responsibility is this: "Just because you didn't <b>choose</b> to get pregnant doesn't mean you aren't responsible for the consequences of your actions." That is, the responsibility for pregnancy results from the willing choice of having sex (assuming a basic knowledge of the relationship between sex and pregnancy).
+</p>
+
+<p>
+Here's the catch: <i>Does choosing an action always result in responsibility for the acknowledged consequences?</i> Consider two competing scenarios:
+(1) A fat man eats a hefty meal consisting of a cheeseburger and chocolate shake (and so on) which results in him having a heart attack 20 minutes later whilst driving home. This causes an accident which results in the death of another person.
+(2) A woman is drinking heavily at a bar and unwittingly gets drunk. She decides to drive home and ends up in an accident which kills another person.
+</p>
+
+<p>
+In each instance, neither the fat man nor the woman chose to kill another person; nor did they choose to have a heart attack or get drunk. They did however choose to eat a hefty meal and drink heavily, respectively. In spite of these symmetries, it seems like the fat man is not as morally culpable (i.e. responsible) as the woman. The reason seems to relate to the <b>proximity</b> between the choice and the outcome.
+</p>
+
+<p>
+The causal relationship between eating a cheeseburger and having a heart attack whilst driving is far slimmer than the causal relationship between drinking heavily and getting drunk. One can repeatedly eat cheeseburgers and drive home without having a heart attack; thus scenario (1) is a remote possibility, not the expected outcome. This is not the case for drinking and getting drunk in scenario (2). It is for this reason that the woman appears to be more responsible for getting drunk than the fat man is responsible for getting a heart attack. The question is this: <i>Is getting pregnant more like getting drunk or more like getting a heart attack?</i> I'm inclined to see getting pregnant as a result of willing sex more like getting drunk as a result of willingly drinking heavily rather than like getting a heart attack as a result of eating a cheeseburger. It's simply the case that the link between having sex and getting pregnant is well-established and not some remote possibility / freak accident like in the case of a heart attack.
+</p>
+
+<p>
+There is a fundamental dissimilarity between these driving examples and abortion, though. In the driving examples, the killing is involuntary; in abortion, there is a causal gap between getting pregnant and killing the baby, which is filled only by the choice of the mother. In this way, abortion is far more morally reprehensible than manslaughter in the driving cases.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-03-21 Mon 06:32</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
