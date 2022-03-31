@@ -29,7 +29,14 @@ class Clock extends React.Component {
 class Quote extends React.Component {
     render() {
         return (
-            <p style={{textAlign: "center"}}><i>"{this.props.text}"</i></p>
+			<figure className="quote">
+				<blockquote>{this.props.text}</blockquote>
+				{this.props.author &&
+				<span className="quoteCitation">
+					&mdash; <a href={this.props.source}>{this.props.author}</a>
+					{this.props.citation && <span>, <cite>{this.props.citation}</cite></span>}
+				</span>}
+			</figure>
         );
     }
 }
@@ -60,10 +67,12 @@ function App() {
                 <img src="images/great_stellated_dodecahedron.png" width="70" />
             </center>
 
+            <Quote text="Above all, do not lie to yourself. A man who lies to himself and listens to his own lie comes to a point where he does not discern any truth either in himself or anywhere around him, and thus falls into disrespect towards himself and others. Not respecting anyone, he ceases to love, and having no love, he gives himself up to passions and coarse pleasures, in order to occupy and amuse himself, and in his vices reaches complete bestiality, and it all comes from lying continually to others and to himself." author="Fyodor Dostoevsky" citation="The Brothers Karamazov" />
+            <Quote text="If you give children a vocabulary that's large enough and complex enough to express their emotions and their ideas...you give them access to complex feelings and emotions within themselves. If you talk to a teenager and all they can say about how they feel is 'bad', and they haven't got a larger vocabulary for 'lonely', 'abused', 'insecure', 'frightened', a huge panoply of words---I remember when my daughter was just telling me that she just felt bad, I bought her a thesaurus! ... What that does is it makes you feel that you can experience this huge complex of emotions at once, and that there are words for all of them. If you want children to feel less frustrated and less disenfranchised and less unable to even feel comfortable with their own emotions, you have to give them a vocabulary that's as complicated as their inner lives." author="Jorie Graham" source="https://www.youtube.com/watch?v=Zat9RXji1Vw&t=1217s" />
             <Quote text="The fool who rests his retirement on the lottery is not vindicated, but rescued, by luck." />
             <Quote text="I never contradict myself; and if I do, then so be it..." />
 
-            <div style={{padding: "10px"}}></div>
+            <div style={{padding: "15px"}}></div>
 
             <List title="Notes:" major inline links={[
                 <a href="notes/reason.html">Reason vs. Emotion</a>,
