@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-21 Mon 06:32 -->
+<!-- 2022-06-27 Mon 23:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ethics</title>
 <link rel="stylesheet" href="../style.css">
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,81 +192,65 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb31e421">1. Meta-ethics</a>
+<li><a href="#org35e9d3d">1. Meta-ethics</a>
 <ul>
-<li><a href="#orged85e8a">1.1. Are the laws of morality as real as the law of gravity?</a></li>
-<li><a href="#orga79628f">1.2. Free-will analogy</a></li>
-<li><a href="#orgf0cb5fd">1.3. A refined notion of morality</a></li>
-<li><a href="#org192e1dd">1.4. Clarifying "Goodness" (not just desirability)</a></li>
-<li><a href="#orgc1cca05">1.5. How to we reconcile moral disagreement?</a></li>
-<li><a href="#org4fcdaf0">1.6. Moral epistemology</a></li>
-<li><a href="#org141f457">1.7. What do I mean by realism?</a></li>
-<li><a href="#org0ccc7a5">1.8. Can morality be coercive?</a></li>
-<li><a href="#org0b1af2d">1.9. A possible account of moral realism</a></li>
-<li><a href="#org95b72e0">1.10. Internal vs External accounts of morality - Why should I act morally?</a></li>
-<li><a href="#org28a08c7">1.11. Scholastic Moral Philosophy</a></li>
-<li><a href="#orgda4d2c9">1.12. Linguistic analogy</a></li>
-<li><a href="#org9f84e7f">1.13. Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</a></li>
-<li><a href="#orgbd0542e">1.14. Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</a></li>
+<li><a href="#org6923240">1.1. Are the laws of morality as real as the law of gravity?</a></li>
+<li><a href="#org9e5ed7c">1.2. Free-will analogy</a></li>
+<li><a href="#org36fe00e">1.3. A refined notion of morality</a></li>
+<li><a href="#org93f75fd">1.4. Clarifying "Goodness" (not just desirability)</a></li>
+<li><a href="#org5cd9334">1.5. How to we reconcile moral disagreement?</a></li>
+<li><a href="#org75aa2b6">1.6. Moral epistemology</a></li>
+<li><a href="#orge8d9180">1.7. What do I mean by realism?</a></li>
+<li><a href="#orgf053be1">1.8. Can morality be coercive?</a></li>
+<li><a href="#orgb3aaf70">1.9. A possible account of moral realism</a></li>
+<li><a href="#org90c29dc">1.10. Internal vs External accounts of morality - Why should I act morally?</a></li>
+<li><a href="#org24b23b6">1.11. Scholastic Moral Philosophy</a></li>
+<li><a href="#org45796df">1.12. Linguistic analogy</a></li>
+<li><a href="#orgc970159">1.13. Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</a></li>
+<li><a href="#orge93fe5a">1.14. Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</a></li>
+<li><a href="#org12c7cbf">1.15. More on Reflective Equilibrium</a></li>
 </ul>
 </li>
-<li><a href="#orgad9cd7a">2. Animal Ethics</a>
+<li><a href="#org411f62c">2. Animal Ethics</a>
 <ul>
-<li><a href="#orga4f2610">2.1. Whence the value of life?</a></li>
-<li><a href="#org7004953">2.2. If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</a></li>
+<li><a href="#orga1b4701">2.1. Whence the value of life?</a></li>
+<li><a href="#org5975b8b">2.2. If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</a></li>
 </ul>
 </li>
-<li><a href="#orgd289ce7">3. Abortion</a>
+<li><a href="#orgfbfa00a">3. Abortion</a>
 <ul>
-<li><a href="#org27e68b2">3.1. A better exposition of the "Violinist Argument"</a></li>
-<li><a href="#org97e34bf">3.2. Another formulation (Baseball Analogy)</a></li>
-<li><a href="#org6bb1ef5">3.3. Shoving a pregnant lady: A flawed pro-life thought experiment</a></li>
-<li><a href="#org4182a8d">3.4. An alternative to life at conception</a></li>
-<li><a href="#orge5d06b8">3.5. When is manslaughter punishable?</a></li>
-<li><a href="#org223b2ad">3.6. A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</a></li>
-<li><a href="#org8fc73ad">3.7. Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</a></li>
+<li><a href="#org1c6bc12">3.1. A better exposition of the "Violinist Argument"</a></li>
+<li><a href="#org7e13b4f">3.2. Another formulation (Baseball Analogy)</a></li>
+<li><a href="#org63aa722">3.3. Shoving a pregnant lady: A flawed pro-life thought experiment</a></li>
+<li><a href="#org04cfcac">3.4. An alternative to life at conception</a></li>
+<li><a href="#org4f8b739">3.5. When is manslaughter punishable?</a></li>
+<li><a href="#org839dbf3">3.6. A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</a></li>
+<li><a href="#orgf92fe72">3.7. Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</a></li>
+<li><a href="#orgd62412e">3.8. Why respect the actualization of potentials via natural processes?</a></li>
+</ul>
+</li>
+<li><a href="#org66689f7">4. Virtue</a>
+<ul>
+<li><a href="#org2719066">4.1. Vapidness / Superficiality</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb31e421" class="outline-2">
-<h2 id="orgb31e421"><span class="section-number-2">1</span> Meta-ethics</h2>
+<div id="outline-container-org35e9d3d" class="outline-2">
+<h2 id="org35e9d3d"><span class="section-number-2">1.</span> Meta-ethics</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orged85e8a" class="outline-3">
-<h3 id="orged85e8a"><span class="section-number-3">1.1</span> Are the laws of morality as real as the law of gravity?</h3>
+<div id="outline-container-org6923240" class="outline-3">
+<h3 id="org6923240"><span class="section-number-3">1.1.</span> Are the laws of morality as real as the law of gravity?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 It's not possible to disobey the law of gravity, whilst we CAN disobey laws of morality.
@@ -284,8 +269,8 @@ However, we can say that MORAL laws are "just as real" as NATURAL laws, but are 
 </div>
 </div>
 
-<div id="outline-container-orga79628f" class="outline-3">
-<h3 id="orga79628f"><span class="section-number-3">1.2</span> Free-will analogy</h3>
+<div id="outline-container-org9e5ed7c" class="outline-3">
+<h3 id="org9e5ed7c"><span class="section-number-3">1.2.</span> Free-will analogy</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 The big problem with morality is the is-ought gap. We can scientifically analyze how people feel about certain moral propositions, give a full account of what is pleasurable and what is not, even generalize certain princples which are universally agreed upon. However, it's fallacious to go from simply observing these principles to declaring that we OUGHT to adhere to these principles. In other words, the REASON-GIVING nature of morality is unique to moral laws and apparently either inexplicable or fallacious.
@@ -309,8 +294,8 @@ Before this, it's worth noting that the conclusions of moral skepticism are not 
 </div>
 </div>
 
-<div id="outline-container-orgf0cb5fd" class="outline-3">
-<h3 id="orgf0cb5fd"><span class="section-number-3">1.3</span> A refined notion of morality</h3>
+<div id="outline-container-org36fe00e" class="outline-3">
+<h3 id="org36fe00e"><span class="section-number-3">1.3.</span> A refined notion of morality</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Finally, we are tasked with explicating this <i>refined</i> notion of morality. As previously stated, the single biggest challenge is accounting for the reason-giving nature of moral laws. To recapitulate, this means that <b>MORAL LAWS PRESCRIBE RATHER THAN MERELY AFFIRM DESIRES</b>. As such, when we say that "honesty is good," we mean that everybody OUGHT to have the desire to be honest. It's not clear what the operative word "OUGHT" actually means, though. It's sometimes contended that this is just a problem for naturalists, but it's not. Consider the following attempts at reconciliation: (1) Under theism, ought means "in accordance with God's will" (2) Under Aristotelian metaphysics, ought means "in accordance with the <b>essence</b> of man." Neither of these views offer any clarity on the meaning of OUGHT since they arbitrarily defer its force to some other notion as well. Why OUGHT I act in accordance with God's will? Why OUGHT I act in accordance with my essence? What if I desire to do otherwise? Of what form does this compulsion to remedy my desires take? If it's contended that I need not remedy my desires but simply defer my actions to this ultimate source, the question persists: Why should I act contrary to my desires when I'm not compelled by necessity?
@@ -338,8 +323,8 @@ The point of this paper is not to recommend one system over another, but rather 
 </div>
 </div>
 
-<div id="outline-container-org192e1dd" class="outline-3">
-<h3 id="org192e1dd"><span class="section-number-3">1.4</span> Clarifying "Goodness" (not just desirability)</h3>
+<div id="outline-container-org93f75fd" class="outline-3">
+<h3 id="org93f75fd"><span class="section-number-3">1.4.</span> Clarifying "Goodness" (not just desirability)</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 So far, I've often appealed to some higher notion of "genuine desirability" vs "mere desirability". In this distinction, I intend to highlight the difference between the conscious, psychological experience of "desirable" vs the claim that something is in accordance with one's fundamental, intrinsic understanding of Good. The former can be ascertained by simply asking someone "do you desire X?" and listening to the response. Whereas, the latter may be in disagreement with this former understanding.
@@ -355,8 +340,8 @@ Note, it might be contended that even if one accepts that physical health requir
 </div>
 </div>
 
-<div id="outline-container-orgc1cca05" class="outline-3">
-<h3 id="orgc1cca05"><span class="section-number-3">1.5</span> How to we reconcile moral disagreement?</h3>
+<div id="outline-container-org5cd9334" class="outline-3">
+<h3 id="org5cd9334"><span class="section-number-3">1.5.</span> How to we reconcile moral disagreement?</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 When we find that two people disagree on some moral judgment, say that "abortion is wrong," we need some process by which this disagreement may be understood. The first, most immediate disagreement to rectify is that of matters of fact. For example, at how many weeks does a heartbeat appear, how many abortions are due to rape/incest, what are the costs to taxpayers, etc. Once such disagreements on matters of fact are either settled or deemed irrelevant, we must concern ourselves with disagreements on values. For example, does a fetus constitute a human life, should a woman's right to bodily autonomy preside over a fetus' right to life, etc. At such levels of disagreement, we must appeal to more fundamental values until an agreement is reached^. For example, there may be agreement that a human life is deserving of protection. At this point, we analyze the problem at hand in relation to this shared value. One may contend that a fetus fails to constitute a human life. Or they may suggest that even though a fetus constitutes a human life, its right to life is succeeded by the mother's right to bodily autonomy. We now must consider the tenability of such higher-order principles, derived from shared lower-order values. To do so, we consider their applicability in all sorts of hypothetical scenarios and test their consistency with other values/principles. For example, if one doesn't consider a fetus to constitute a human life, what about a severely mentally disabled child? Or what about a new-born child?
@@ -376,8 +361,8 @@ How do we know when we've reached a fundamental value, rather than having simply
 </div>
 </div>
 
-<div id="outline-container-org4fcdaf0" class="outline-3">
-<h3 id="org4fcdaf0"><span class="section-number-3">1.6</span> Moral epistemology</h3>
+<div id="outline-container-org75aa2b6" class="outline-3">
+<h3 id="org75aa2b6"><span class="section-number-3">1.6.</span> Moral epistemology</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 How do we ascertain moral knowledge? Given some moral proposition, by what means do we measure its truth value?
@@ -397,8 +382,8 @@ This is the dialectic which must be perennially endeavored by any individual of 
 </div>
 </div>
 
-<div id="outline-container-org141f457" class="outline-3">
-<h3 id="org141f457"><span class="section-number-3">1.7</span> What do I mean by realism?</h3>
+<div id="outline-container-orge8d9180" class="outline-3">
+<h3 id="orge8d9180"><span class="section-number-3">1.7.</span> What do I mean by realism?</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 TL;DR - I contend that there exist intrinsic, universal (except for the morally deficient) values which all people hold (whether they know it or not) and whose truth-value is irrespective of anybody's affective disposition (ref. Can morality be coercive?)
@@ -430,8 +415,8 @@ When we ask whether something is real or not, we have to specify the explanatory
 </div>
 </div>
 
-<div id="outline-container-org0ccc7a5" class="outline-3">
-<h3 id="org0ccc7a5"><span class="section-number-3">1.8</span> Can morality be coercive?</h3>
+<div id="outline-container-orgf053be1" class="outline-3">
+<h3 id="orgf053be1"><span class="section-number-3">1.8.</span> Can morality be coercive?</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 Another way of phrasing the above question is as such: Is it possible that some moral proposition is true even though nobody in the world believes it?
@@ -448,8 +433,8 @@ Though the answer is yes in the sense that it's possible we all may be in this w
 </div>
 </div>
 
-<div id="outline-container-org0b1af2d" class="outline-3">
-<h3 id="org0b1af2d"><span class="section-number-3">1.9</span> A possible account of moral realism</h3>
+<div id="outline-container-orgb3aaf70" class="outline-3">
+<h3 id="orgb3aaf70"><span class="section-number-3">1.9.</span> A possible account of moral realism</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 Through anthropological data, we understand that cooperation (loaded term) is an evolutionary adaptation. We might extrapolate that there are structures in the brain associated with such behaviors. This then might be the sense in which our desires are <b>real</b> and objective. It is thus our task to ascertain these desires through any means (e.g. introspection, biological examination, psychological experimentation, etc.) and then to optimally facilitate these desires through politics, etc.
@@ -457,8 +442,8 @@ Through anthropological data, we understand that cooperation (loaded term) is an
 </div>
 </div>
 
-<div id="outline-container-org95b72e0" class="outline-3">
-<h3 id="org95b72e0"><span class="section-number-3">1.10</span> Internal vs External accounts of morality - Why should I act morally?</h3>
+<div id="outline-container-org90c29dc" class="outline-3">
+<h3 id="org90c29dc"><span class="section-number-3">1.10.</span> Internal vs External accounts of morality - Why should I act morally?</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 <a href="https://plato.stanford.edu/entries/williams-bernard/#InteExteReas">Ref: Bernard Williams</a>
@@ -482,8 +467,8 @@ Such a workaround is perfectly acceptable, though it then diminishes completely 
 </div>
 </div>
 
-<div id="outline-container-org28a08c7" class="outline-3">
-<h3 id="org28a08c7"><span class="section-number-3">1.11</span> Scholastic Moral Philosophy</h3>
+<div id="outline-container-org24b23b6" class="outline-3">
+<h3 id="org24b23b6"><span class="section-number-3">1.11.</span> Scholastic Moral Philosophy</h3>
 <div class="outline-text-3" id="text-1-11">
 <p>
 The framework of medieval moral philosophers was to posit a dichotomy between <i>synderesis</i> and <i>conscientia</i>. The former is the natural capacity of disposition of the practical reason to apprehend intuitively the universal first principles of human actions. The latter is the application of reason to these first principles in forming higher-order normative beliefs. Importantly, <i>synderesis</i> is infallible but <i>conscientia</i> is capable of erring. Indeed, I would contend that our reason often fails us in generating the correct higher-order beliefs from our first principles. So much so that the widespread disagreement regarding higher-order beliefs (e.g. political practices) has motivated widespread skepticism regarding the first principles themselves. I think this is clearly a mistake. It's simply not appreciated that drastically different conclusions can be reached through the application of even mildly different approaches alongside usually very different matters of fact.
@@ -495,8 +480,8 @@ Take <i>systemic racism</i> as an example. It's tempting to believe that those o
 </div>
 </div>
 
-<div id="outline-container-orgda4d2c9" class="outline-3">
-<h3 id="orgda4d2c9"><span class="section-number-3">1.12</span> Linguistic analogy</h3>
+<div id="outline-container-org45796df" class="outline-3">
+<h3 id="org45796df"><span class="section-number-3">1.12.</span> Linguistic analogy</h3>
 <div class="outline-text-3" id="text-1-12">
 <p>
 One way to think about morality is through an analogy with language. The main similarities are (1) generativity (2) innateness (3) intuition-based epistemology.
@@ -520,8 +505,8 @@ The question persists, though: In what sense is morality real if it's not mind-i
 </div>
 </div>
 
-<div id="outline-container-org9f84e7f" class="outline-3">
-<h3 id="org9f84e7f"><span class="section-number-3">1.13</span> Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</h3>
+<div id="outline-container-orgc970159" class="outline-3">
+<h3 id="orgc970159"><span class="section-number-3">1.13.</span> Pyschological analogy (happiness vs. goodness), Is-Ought Distinction</h3>
 <div class="outline-text-3" id="text-1-13">
 <p>
 A major challenge proposed to moral realists is that of moral epistemology. Given that moral facts, if they exist, must be particularly queer, how can we claim to have knowledge about them? This objection is also sometimes phrased in terms of the is-ought distinction: given that nonmoral claims alone can never entail a moral claim, how may we come to know moral claims except by presupposition?
@@ -541,8 +526,8 @@ Ultimately, we commit the is-ought fallacy all the time. It's a necessary compon
 </div>
 </div>
 
-<div id="outline-container-orgbd0542e" class="outline-3">
-<h3 id="orgbd0542e"><span class="section-number-3">1.14</span> Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</h3>
+<div id="outline-container-orge93fe5a" class="outline-3">
+<h3 id="orge93fe5a"><span class="section-number-3">1.14.</span> Is/Ought Distinction: How do we go from descriptive ethics to normative ethics? - Reflective Equilibrium</h3>
 <div class="outline-text-3" id="text-1-14">
 <p>
 <a href="https://youtu.be/uxZ-6yUtQ3o?t=3550">Source</a> [59:10 - 1:10:46]
@@ -577,13 +562,44 @@ As another example, take color perception. It's not clear what it would even mea
 </p>
 </div>
 </div>
+
+<div id="outline-container-org12c7cbf" class="outline-3">
+<h3 id="org12c7cbf"><span class="section-number-3">1.15.</span> More on Reflective Equilibrium</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+<span class="underline">Example Application of Reflection Equilibrium:</span>
+(This is my response to a comment by @CYDRA<sub>Infinity</sub> asking me how I form my moral beliefs if I don't rely on the teachings of the Church.)
+</p>
+
+<p>
+Basically, I start with moral intuitions in concrete cases, then attempt to derive general principles which explain my intuitions in these cases, and finally subject this whole system of beliefs to an ongoing process of rational scrutiny, whereby I aim to make all of my moral beliefs internally consistent. The end result is a system of moral beliefs which are consistent, align with my intuitions, are explained by a set of general principles, and are amenable to modification in light of new evidence.
+</p>
+
+<p>
+As an example, we might start with a few compelling moral intuitions like "killing my child is wrong", "killing my parents is wrong", "killing my neighbor is wrong", etc. At first, we might attempt to parsimoniously explain all these concrete moral beliefs by deriving the general moral principle that "killing is wrong". And then, we might have the additional moral intuition that "if someone else is trying to kill me, I have the right to kill them in self-defense". But, according to our earlier principle that "killing is wrong", we would deduce that "killing in self-defense is wrong" also. Thus, we've arrived at an inconsistency: it's both right and wrong to kill in self-defense. In order to accommodate my new belief that self-defense is justified, I need to resolve this inconsistency. One way to do this would be by discarding my abstract moral principle that "killing is wrong", but then I lose a lot of explanatory power for my concrete beliefs about when killing actually is wrong. Another way would be to ignore my intuition about self-defense being justified, but then my system would seriously suffer from intuitive implausibility. Instead, I can simply refine my moral principle to become "killing innocent people is wrong". Now, my modified general principle is consistent with my intuition about self-defense, and I'm also able to retain the strong explanatory power of this principle when it comes to intuitions about killing my children, parents, neighbors, etc. In theory, this approach should be applied to all of my moral intuitions as I consider more and more scenarios throughout my life, resulting in a complex web of beliefs, consisting of both concrete cases and general principles.
+</p>
+
+<p>
+Note that my approach rests on the general reliability of moral intuitions when subjected to a process of rational scrutiny. This is certainly questionable, but I don't know of any better approach, since I would be even more skeptical of approaches which appeal to the reliability of religious texts, for example. Additionally, if you get all of your moral beliefs from the Church, how do you know that they are even consistent? Have you independently verified this? What do you do when your moral intuitions strongly conflict with the teachings of the Church? You might simply defer to the authority of the Church in such matters, but maybe the issue isn't with the Church but with your subjective interpretation of their teachings. In that case, you shouldn't ignore your moral intuition, but rather use it as a guide to interpreting the Church's teachings. But once you start doing that, your approach begins to resemble my own.
+</p>
+
+<p>
+These are just some of the downsides of your approach compared to mine. But of course, your approach has some benefits too: it's much simpler to follow, doesn't require as much thinking, is supported by centuries of traditional wisdom, and sanctioned by the infinite wisdom of God (assuming that your interpretation of the Church's teachings perfectly align with the will of God, which is at least questionable).
+</p>
+
+<p>
+Sorry for the long response, but I hope that helps explain how you might develop moral beliefs without relying on the teachings of the Church or any other supposed authority. Feel free to ask for any clarifications in case I was unclear.
+</p>
 </div>
-<div id="outline-container-orgad9cd7a" class="outline-2">
-<h2 id="orgad9cd7a"><span class="section-number-2">2</span> Animal Ethics</h2>
+</div>
+</div>
+
+<div id="outline-container-org411f62c" class="outline-2">
+<h2 id="org411f62c"><span class="section-number-2">2.</span> Animal Ethics</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orga4f2610" class="outline-3">
-<h3 id="orga4f2610"><span class="section-number-3">2.1</span> Whence the value of life?</h3>
+<div id="outline-container-orga1b4701" class="outline-3">
+<h3 id="orga1b4701"><span class="section-number-3">2.1.</span> Whence the value of life?</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 I don't think life is <b>intrinsically valuable</b>. That is, I don't think that <i>just because</i> some being is alive that it therefore is deserving of moral consideration. This view is strongly in tension with the ubiquitous appeals to so-called <b>human rights</b> in ethical and political discourse. Indeed, I think such notions as the <i>right to life</i> are ultimately indefensible, except possibly as heuristics within an ethical framework which doesn't appeal to life as being intrinsically valuable. A number of considerations pull me in the direction of this conclusion:
@@ -644,16 +660,16 @@ All in all, life seems like a pretty bad source of value. So what about <b>senti
 </div>
 </div>
 
-<div id="outline-container-org7004953" class="outline-3">
-<h3 id="org7004953"><span class="section-number-3">2.2</span> If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</h3>
+<div id="outline-container-org5975b8b" class="outline-3">
+<h3 id="org5975b8b"><span class="section-number-3">2.2.</span> If you pay for the slaughter of animals just for taste and convenience, why care for your pet?</h3>
 </div>
 </div>
-<div id="outline-container-orgd289ce7" class="outline-2">
-<h2 id="orgd289ce7"><span class="section-number-2">3</span> Abortion</h2>
+<div id="outline-container-orgfbfa00a" class="outline-2">
+<h2 id="orgfbfa00a"><span class="section-number-2">3.</span> Abortion</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org27e68b2" class="outline-3">
-<h3 id="org27e68b2"><span class="section-number-3">3.1</span> A better exposition of the "Violinist Argument"</h3>
+<div id="outline-container-org1c6bc12" class="outline-3">
+<h3 id="org1c6bc12"><span class="section-number-3">3.1.</span> A better exposition of the "Violinist Argument"</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Say you are an individual with a known cardiac issue. You consensually and wilfully choose to drive your car for pleasure / work, with the awareness that you may suffer a heart attack and subsequently be hospitalized along with another person hit by your car. Consequently, you are hooked up to the other person such that their life depends on your connection to them.
@@ -673,8 +689,8 @@ After all, even if we accept that the person's bodily autonomy trumps the right 
 </div>
 </div>
 
-<div id="outline-container-org97e34bf" class="outline-3">
-<h3 id="org97e34bf"><span class="section-number-3">3.2</span> Another formulation (Baseball Analogy)</h3>
+<div id="outline-container-org7e13b4f" class="outline-3">
+<h3 id="org7e13b4f"><span class="section-number-3">3.2.</span> Another formulation (Baseball Analogy)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Say two adults, Alice and Bob, are playing baseball in a field. They've taken some reasonable precautions: not too windy, facing away from any people, in a relatively secluded area, etc. In the course of playing (which has hitherto been inconsequential), the ball at one point inadvertently diverges from its intended path and hits Charlie, somebody walking in the park. This was entirely unintentional and unexpected and reasonable measures were taken to prevent it from happening. Nevertheless, Charlie is taken to the hospital and given a potentially fatal diagnosis.
@@ -698,8 +714,8 @@ A note on inequality of responsibility: In each case (i.e. baseball or sex) we h
 </div>
 </div>
 
-<div id="outline-container-org6bb1ef5" class="outline-3">
-<h3 id="org6bb1ef5"><span class="section-number-3">3.3</span> Shoving a pregnant lady: A flawed pro-life thought experiment</h3>
+<div id="outline-container-org63aa722" class="outline-3">
+<h3 id="org63aa722"><span class="section-number-3">3.3.</span> Shoving a pregnant lady: A flawed pro-life thought experiment</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Consider a scenario in which a man walking on the street is in a hurry and shoves past a pregnant woman. In doing so, he inadvertently causes her to fall down on top of her baby, resulting in a miscarriage. The man is tremendously apologetic and regretful. Nevertheless, most people would say the man is responsible for the baby's death and should be charged accordingly. Why in this case do we consider the life of the baby meaningful but not in the case of abortion?
@@ -719,8 +735,8 @@ So, this objection fails to establish a moral inconsistency for the person who s
 </div>
 </div>
 
-<div id="outline-container-org4182a8d" class="outline-3">
-<h3 id="org4182a8d"><span class="section-number-3">3.4</span> An alternative to life at conception</h3>
+<div id="outline-container-org04cfcac" class="outline-3">
+<h3 id="org04cfcac"><span class="section-number-3">3.4.</span> An alternative to life at conception</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 The "violinist argument" presupposes that the baby constitutes a life. This is, however, quite a difficult claim to justify. Instead, we may say that the fetus (at conception) has yet to constitute a life, but that under normal circumstances, it will in a predicatable way develop into what is unequivocally a life. Under what circumstances is an action which interferes with this natural process (to the extent of preventing the life) justified? More pressingly, does abortion satisfy these criteria?
@@ -744,8 +760,8 @@ At the end of the day, we've shown that allowing manslaughter in the case of abo
 </div>
 </div>
 
-<div id="outline-container-orge5d06b8" class="outline-3">
-<h3 id="orge5d06b8"><span class="section-number-3">3.5</span> When is manslaughter punishable?</h3>
+<div id="outline-container-org4f8b739" class="outline-3">
+<h3 id="org4f8b739"><span class="section-number-3">3.5.</span> When is manslaughter punishable?</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Say a father is playing with his 5 month old daughter by lightly throwing her up and down, somersaulting, running around, etc. In a momentary act of carelessness, the father slips and the daughter is dropped. Despite the father's best efforts to be careful and his subsequent rush to the hospital, the daughter dies. A tragic case of manslaughter&#x2026; Should the father face repercussions?
@@ -769,8 +785,8 @@ This latter point encourages us to consider a potential threshold of reasonble p
 </div>
 </div>
 
-<div id="outline-container-org223b2ad" class="outline-3">
-<h3 id="org223b2ad"><span class="section-number-3">3.6</span> A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</h3>
+<div id="outline-container-org839dbf3" class="outline-3">
+<h3 id="org839dbf3"><span class="section-number-3">3.6.</span> A paradox of unalienable rights - Can one consent to giving up one's ability to consent?</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 Consider the example of a pupil who admires his tutor and desires to be closer to him. The pupil is so enamored with his tutor and so determined to seek his guidance that he is willing to enslave himself to his tutor. So, he offers himself and the tutor accepts. As time goes on, the pupil grows discontent with his state of affairs. He doesn't feel that he has learned what he was hoping to learn and now harbors a growing resentment for his tutor. He wants out&#x2026; Let's say the enslavement was just temporary and that he is half-way done already. Does the pupil have the right to retroactively revoke his consent and demand his freedom?
@@ -817,8 +833,9 @@ Of course, another approach is to simply reject any notion of "unalienable right
 </p>
 </div>
 </div>
-<div id="outline-container-org8fc73ad" class="outline-3">
-<h3 id="org8fc73ad"><span class="section-number-3">3.7</span> Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</h3>
+
+<div id="outline-container-orgf92fe72" class="outline-3">
+<h3 id="orgf92fe72"><span class="section-number-3">3.7.</span> Choice and Responsibility - Cheeseburger/Heart Attack vs. Drinking/Drunk</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 My general weapon in attacking abortion has been the <b>responsibility</b> of both parents who engage in sexual reproduction for the resulting pregnancy. As acknowledged before, the burden of this responbility is unfortunately placed disproportionately upon the mother due to an unavoidable biological fact; but morally speaking, both parents should be equally responsible for the pregnancy. The effect of this responsibility is this: "Just because you didn't <b>choose</b> to get pregnant doesn't mean you aren't responsible for the consequences of your actions." That is, the responsibility for pregnancy results from the willing choice of having sex (assuming a basic knowledge of the relationship between sex and pregnancy).
@@ -839,13 +856,88 @@ The causal relationship between eating a cheeseburger and having a heart attack 
 </p>
 
 <p>
-There is a fundamental dissimilarity between these driving examples and abortion, though. In the driving examples, the killing is involuntary; in abortion, there is a causal gap between getting pregnant and killing the baby, which is filled only by the choice of the mother. In this way, abortion is far more morally reprehensible than manslaughter in the driving cases.</p>
+There is a fundamental dissimilarity between these driving examples and abortion, though. In the driving examples, the killing is involuntary; in abortion, there is a causal gap between getting pregnant and killing the baby, which is filled only by the choice of the mother. In this way, abortion is far more morally reprehensible than manslaughter in the driving cases.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd62412e" class="outline-3">
+<h3 id="orgd62412e"><span class="section-number-3">3.8.</span> Why respect the actualization of potentials via natural processes?</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+Some people will ground the rights of fetuses as follows: "Beginning at the moment of conception, a new life is brought into existence which, if left to its natural ends, will develop into a person. Beyond the intrinsic good of respecting natural teleology, we ought to value the fetus in light of what it will become, a person, which is eminently valuable." There are many objections to this line of reasoning:
+</p>
+
+<p>
+First, are interventions in natural processes always wrong? What about medical intervention? One can't seriously dispute that death and disease are very natural processes, considering all the reasons: evolutionary (natural selection prioritizes adaptations for early development at the expense of later development, since those organisms which never make it past early development never reproduce, whereas the negative externalities are only manifested in old age, after reproduction); mechanical (all design choices involve tradeoffs which lead to deterioration over time, so aging is an inevitable consequence of us being animals, not angels); ecological (limited resources can't support indefinitely growing population); and so on. Nevertheless, we think that medical interventions for dying people are not just permissible but laudable. What's the symmetry breaker between intervening in the natural process of death vs. intervening in the natural process of fetal development? One can't say that death is always "destructive" whereas fetal development is "constructive", since death is sometimes facilitated by the growth of harmful biological entities like tumors (and fetal development likely involves the destruction of some things). Whatever the case, this example of medical intervention refutes the simple line that it is always inappropriate to intervene in natural processes.
+</p>
+
+<p>
+Second, why should we grant considerations to something in virtue of what it will become but is not yet? Consider cake batter which has been placed in the oven and will soon become cake. Given that the object currently in the oven is not yet a cake, why should we ascribe to it the value of a cake? Surely we should not, as this would be absurd. So why should we ascribe the value of personhood to a fetus, which is not yet a person, but will (if left to its natural ends) develop into one?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org66689f7" class="outline-2">
+<h2 id="org66689f7"><span class="section-number-2">4.</span> Virtue</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2719066" class="outline-3">
+<h3 id="org2719066"><span class="section-number-3">4.1.</span> Vapidness / Superficiality</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+There is a popular prejudice against behaviors or interests which are derided as vapid, superficial, self-centered, prideful, unserious, etc. Think of someone who enjoys makeup, or pays lots of attention to their appearance and clothing, or who worries about how they are perceived by others. There are many concerns with this attitude, though my main interest is in understanding its basis and with disentangling the legitimate from the baseless aspects of this criticism.
+</p>
+
+<p>
+<span class="underline">Preliminary Concerns</span>
+<b>Sexism:</b> It's no coincidence, I think, that most of the examples of so-called vapid interests are typically feminine interests. I don't want to say more about this except that we should be mindful of the potential influence of this prejudice when examining this attitude.
+</p>
+
+<p>
+<b>Conflation:</b> Why combine vapidness, superficiality, self-centeredness, pridefulness, unseriousness, and so on into one category? Surely it's one thing to be vapid, in the sense of having boring or unsophisticated interests, and another thing to be self-centered, in the sense of not caring about others. So, we need to be precise when examining this attitude.
+</p>
+
+<p>
+<span class="underline">Legitimate Aspects</span>
+</p>
+
+<p>
+<span class="underline">Cautions</span>
+</p>
+
+<p>
+<span class="underline">Demarcating Natural vs. Artificial</span>
+This section was inspired by Destiny's comments about a "natural" variation in appearance among humans, including things like clothing and trimming beards, and then contrasting this with an "artificial" variation, mostly focusing on things like makeup. I want to do a few things:
+</p>
+
+<p>
+(1) Understand whether this distinction really makes sense and, if so, elaborate the boundary:
+</p>
+<ul class="org-ul">
+<li>Preliminary thoughts: It seems like there clearly is such a thing as artificial variation, and that there's a kind of spectrum, since just a little makeup which barely changes one's appearance isn't the same as clown makeup</li>
+<li>What is the criterion? Maybe "measure of artificiality is the deviation from appearance if left purely to natural forces", but then there are some issues: people's appearance naturally changes over time (sometimes significantly), so at what time do we take a snapshot w.r.t. which we compare the result of the artificial modifications. For example, a man's beard, if left purely to natural forces, goes from looking very similar to a trimmed beard to looking like an unkempt mess. So, what should we compare a trimmed beard to?</li>
+<li>Here's an alternative criterion: <b>The measure of artificiality is the deviation in appearance after applying the artificial modification</b>. This resolves the beard trimming example, since we've established a definite reference point, and it accommodates the intuition that it's more artificial to trim a long beard than to trim a short beard. It seems that we can do the same with makeup, where less makeup is less artificial than more makeup. So this criterion seems satisfactory.</li>
+</ul>
+
+<p>
+(2) What's the relationship between artificiality and ethics? Is it as simple as "more artificiality" = "more unethical"?
+</p>
+<ul class="org-ul">
+<li>Here's one motivation for that principle: Artificiality shifts the societal expectation for a "normal" appearance, and thereby imposes a burden on everybody to realign their appearance w.r.t. to this shifted norm; depending on the nature of this burden, some groups of people will have a harder time satisfying it (e.g. impoverished, black, physically deformed), and so they will be negatively impacted; therefore, greater artificiality will impose a greater burden on a greater number of people, and so have a greater negative impact.</li>
+<li>I generally find this line of reasoning to be sensible. The lingering question is this: What do we get out of artificiality, and is this something that could achieved without artificiality if we "simply" recalibrated society at the level of more natural variation?</li>
+<li>Take the following extreme example: The world is filled with hideous orcs, whose appearance causes great suffering to look upon. As a solution, somebody invents makeup, which transforms orcs into beautiful people, who are pleasant to look upon. Unfortunately, a small number of orcs are so hideous that they cannot be helped even with makeup. In this case, the benefit of makeup (i.e. artificiality) is that it alleviates the suffering of looking upon others; but the cost is that normalizing makeup will make the small number of ultra-hideous orcs even more hideous in comparison to the people, and so we will have essentially rendered them pariahs; whereas, if we didn't normalize makeup, then at least everyone would be roughly equally hideous.</li>
+<li>The essential question is this: <b>Is it better to help only some rather than nobody?</b> I think this question is difficult because the answer depends on what can be assumed if we help nobody. In the case of beauty, our intuition is that social standards would simply readjust and so most people would be considered attractive, whereas makeup artificially inflates this standard so that most people are considered ugly without using makeup. However, my extreme example stipulates that the standard for appearance is rooted in an immutable biological response to the hideous appearance of orcs vs. the beautiful appearance of persons; and so social standards could not simply be "readjusted" to where orcs are now considered beautiful. This is much closer to the case of wealth, where it seems more reasonable to help some rather than nobody; that is, given the option to give money to even just a few people, this seems generally preferable to not giving money to anybody, because the value of money doesn't straightforwardly adapt to the amount of money that people have.</li>
+<li>Therefore, if we assume that social standards are mostly adaptable (like in the case of human appearance, presumably), then the answer to our question ("is it better to help only some rather than nobody?") is clearly no; instead, we should adapt our social standards to natural variation, so that most people are benefited without needing to satisfy the burden of meeting a higher artificial standard. But, if we assume that social standards are not straightforwardly adaptable (like in the case of wealth, presumably), then the answer to our question is more complicated; we now need to consider the tradeoff between benefiting a few and potentially alienating the rest. In contrived examples where a million dollars is generated out of nowhere, and we have the option of either giving it to one random person or nobody, it's clearly better to take the money; but in more realistic example where inequality has a systemic / institutional negative effect, the tradeoff demands more serious consideration.</li>
+<li>Switching sides, here's a motivation against the principle that artificiality is unethical: What about cases where artificial modifications bring people who are afflicted by outlier circumstances closer to the middle of natural variation? For instance, facial reconstruction surgery for burn victims or people with severe physical deformities? Or even artificial limbs and things of that sort? Clearly, it's not so simply as saying "more artificial" = "more unethical".</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-03-21 Mon 06:32</p>
+<p class="date">Created: 2022-06-27 Mon 23:00</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

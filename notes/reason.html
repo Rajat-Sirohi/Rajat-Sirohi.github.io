@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-21 Mon 06:28 -->
+<!-- 2022-06-27 Mon 23:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Reason</title>
 <link rel="stylesheet" href="../style.css">
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,43 +192,22 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7ed503d">1. Reason vs. Emotion (False Dichotomy)</a></li>
+<li><a href="#org3178e50">1. Reason vs. Emotion (False Dichotomy)</a></li>
+<li><a href="#org150c7dc">2. The tension between intuitions and principles in formulating/updating beliefs</a></li>
+<li><a href="#org1dee75c">3. The Fallacy Fork: The Fallacy of Most Logical Fallacies</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7ed503d" class="outline-2">
-<h2 id="org7ed503d"><span class="section-number-2">1</span> Reason vs. Emotion (False Dichotomy)</h2>
+<div id="outline-container-org3178e50" class="outline-2">
+<h2 id="org3178e50"><span class="section-number-2">1.</span> Reason vs. Emotion (False Dichotomy)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Many people perpetuate a strict dichotomy between reason/emotion, logic/feelings, apathy/passion, skepticism/faith, and so on. This has the dual consequences of falsely validating both (1) the <i>logic lord</i> who justifies his lack of consideration for others on the grounds that it's "more logical" and also (2) the <i>new age woo-believer</i> who justifies his anti-empiricism and anti-rationalism on the grounds that it's "more considerate" and "less cold-hearted".
@@ -284,12 +264,66 @@ Is this in fact a demonstration of the limits of reason? Not really. We're emoti
 </p>
 
 <p>
-So, such stories should not be used to advocate for the use of emotion or passion <i>in lieu</i> of reason when making (important) decisions. Moreover, it should not be construed to mean that reason always motivates skepticism and emotion always motivates faith, since my elaboration above clearly lays out a rational case for having faith in one's self and taking the risk; likewise, emotion could just as well breed skepticism if the person's primary emotions were self-doubt, fear, insecurity, and so on instead.</p>
+So, such stories should not be used to advocate for the use of emotion or passion <i>in lieu</i> of reason when making (important) decisions. Moreover, it should not be construed to mean that reason always motivates skepticism and emotion always motivates faith, since my elaboration above clearly lays out a rational case for having faith in one's self and taking the risk; likewise, emotion could just as well breed skepticism if the person's primary emotions were self-doubt, fear, insecurity, and so on instead.
+</p>
+
+<p>
+<span class="underline">Mental Illness Example:</span>
+Consider a person who is anxious and depressed. At a rational/intellectual level, this person most likely understands that their thoughts/feelings (e.g. "Everybody is looking at me and thinks I'm stupid"; "I'm such a burden on everybody"; "Nobody cares about me, they would be better off if I were dead") are not well-founded, i.e., likely false and always counterproductive. This self-awareness is a big source of frustration because the person understands what they need to do in order to improve and that many of their reflexive thoughts/feelings are inhibiting this goal. Nevertheless, at an emotional level, the anxious and depressed person can't help but have these thoughts/feelings. Even if they can articulate all of the reasons why these thoughts/feelings are baseless and counterproductive, they still experience them and their negative effects on one's psyche.
+</p>
+
+<p>
+This is an area in which the division between reason and emotion is productive and meaningful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org150c7dc" class="outline-2">
+<h2 id="org150c7dc"><span class="section-number-2">2.</span> The tension between intuitions and principles in formulating/updating beliefs</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+There is a popular tendency to adopt one of either extreme between intuitions and principles regarding the way in which one formulates/updates their beliefs: <i>intuitionism</i> and <i>dogmatism</i>. Much like the reason/emotion dichotomy, this division is littered with associations which are difficult to disentangle. Ultimately, I think the process of <i>reflective equilibrium</i> resolves these tensions and confusions, and also more accurately relfects the way the people do (and ought to) reason.
+</p>
+
+<p>
+<span class="underline">Intuitionism:</span>
+</p>
+<ul class="org-ul">
+<li>The intuitionist purely relies on intuitions about particular circumstances, dismissing the relevance of overarching systems / principles on the basis that "life is too complicated to be reduced to a set of principles."</li>
+<li><b>Pros:</b> Usually leads to correct views on most questions, since our intuitions are well-trained by experience and conventional wisdom.</li>
+<li><b>Cons:</b> Fails to account for general principles of reason like the principle of non-contradiction, i.e., there's nothing stopping two intuitions from conflicting; occasionally leads to very incorrect views on certain issues, especially those which one have not been scrutinized by a broad community (e.g. religious and political beliefs from insular communities); fails to motivative beliefs, leading to moral luck and the inability to reason about issues for which one lacks the necessary intuitions.</li>
+</ul>
+
+<p>
+<span class="underline">Dogmatism:</span>
+</p>
+<ul class="org-ul">
+<li>The dogmatist uncompromisingly adheres to some set of doctrines, despite how undesirable the conclusions may be, insisting that "intuitions are unreliable" and "if I'm uncomfortable with the conclusion, that's just an emotional bias against reason."</li>
+<li><b>Pros:</b> Forces one's views to cohere logically; good at challenging biases inculcated by one's experiences (e.g. learning from insular communities, or non-representative anecdotes).</li>
+<li><b>Cons:</b> Fails to consider the fallibility of the principles which one adopts, and so insists that any conclusions derived from these principles must be correct; fails to consider the epistemic weight of intuitions, especially their role in both shaping and being shaped by broader principles.</li>
+</ul>
+
+<p>
+<span class="underline">Reflective Equilibrium:</span>
+The healthy balance between intuitionism and dogmatism is reflective equilibrium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dee75c" class="outline-2">
+<h2 id="org1dee75c"><span class="section-number-2">3.</span> The Fallacy Fork: The Fallacy of Most Logical Fallacies</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Anyone who has learned a bit of philosophy or critical thinking has likely come across a list of formal and informal logical fallacies: <i>ad hominem</i>, begging the question, affirming the consequent, <i>argumentum ad populum</i>, appeal to authority, etc. At first, encountering these fallacies can prove to be quite exciting and useful, as one begins to recognize them all over the place, which aids one's attempts to think rationally. However, if one is perceptive, they will also quickly realize that many arguments which at first seem to employ one or more common fallacies in fact turn out to be logically valid, not fallacious at all. For instance, is it an <i>ad hominem</i> fallacy to point out that a media pundit is being funded by billionaires and so he is not a reliable commentator on their activities? Is it an <i>argument ad populum</i> fallacy to believe in scientific consensus because they are taken to be reliable indicators of the truth? Is it a fallacious appeal to authority to recommend that someone follow a professional doctor's advice compared to some crazy online blog post written by someone with no credentials in medicine or mechanism for being held accountable for misinformation?
+</p>
+
+<p>
+What the above examples demonstrate is that many of these so-called fallacies aren't actually fallacious. What some defenders will say in response is that my examples aren't fallacious because they don't actually employ the fallacy which they purport to employ, they only seem to upon first glance. For instance, most of the inferences being made are from the reliability of certain sources of information to the likely truth of their statements. This is a valid inference, unlike the inferences employed by the fallacies (e.g. if someone has bad characteristics, then what they say should be rejected; if most people believe something, it's probably true; if someone has good characteristics, then what they say should be accepted). What's confusing, though, is that it's very easy to interpret my statements as invoking these fallacies, and in most actual contexts, people would not bat an eye if I were accused of employing these fallacies after making those statements. This can be summed up by the what's called the <b>fallacy fork: Either a logical fallacy is so strictly defined that it's genuinely fallacious but almost never employed, or it's so loosely defined that many genuinely valid inferences can be accused of being fallacious by comparing them to one of this long list of so-called fallacies.</b></p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-03-21 Mon 06:28</p>
+<p class="date">Created: 2022-06-27 Mon 23:07</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

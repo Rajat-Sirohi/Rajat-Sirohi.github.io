@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-25 Fri 11:44 -->
+<!-- 2022-06-27 Mon 23:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Free Will</title>
 <link rel="stylesheet" href="../style.css">
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,60 +192,37 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org204c744">1. Christian List's view</a></li>
-<li><a href="#orga27f7d4">2. What is free will?</a></li>
-<li><a href="#org44c4984">3. Libet experiments</a></li>
-<li><a href="#orgff0dc86">4. Tumors all the way down</a></li>
-<li><a href="#orgd3c9a54">5. Newcomb's Paradox</a>
+<li><a href="#orgcc625ce">1. Christian List's view</a></li>
+<li><a href="#orgeb799a5">2. What is free will?</a></li>
+<li><a href="#orgf88e564">3. Libet experiments</a></li>
+<li><a href="#org3974ea5">4. Tumors all the way down</a></li>
+<li><a href="#orge4b576e">5. Newcomb's Paradox</a>
 <ul>
-<li><a href="#orge036e4d">5.1. Statement of the problem</a></li>
-<li><a href="#org1f38005">5.2. Explaining the dilemma</a></li>
-<li><a href="#org71a7529">5.3. Reformulating the paradox using probability theory</a>
+<li><a href="#org04ff215">5.1. Statement of the problem</a></li>
+<li><a href="#orgf416ce5">5.2. Explaining the dilemma</a></li>
+<li><a href="#orgf75ce61">5.3. Reformulating the paradox using probability theory</a>
 <ul>
-<li><a href="#orgadc2c42">5.3.1. Two-Boxer's argument (NO)</a></li>
-<li><a href="#orgffa5d7f">5.3.2. One-Boxer's argument (YES)</a></li>
+<li><a href="#org14b9240">5.3.1. Two-Boxer's argument (NO)</a></li>
+<li><a href="#org9ef346d">5.3.2. One-Boxer's argument (YES)</a></li>
 </ul>
 </li>
-<li><a href="#org179ee12">5.4. Conclusion</a></li>
-<li><a href="#orgb67b622">5.5. Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</a></li>
+<li><a href="#org3730c19">5.4. Conclusion</a></li>
+<li><a href="#org242b24e">5.5. Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org204c744" class="outline-2">
-<h2 id="org204c744"><span class="section-number-2">1</span> Christian List's view</h2>
+<div id="outline-container-orgcc625ce" class="outline-2">
+<h2 id="orgcc625ce"><span class="section-number-2">1.</span> Christian List's view</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.youtube.com/watch?v=XHmdhDjLGwA">This interview</a> with philosopher Christian List succinctly and pretty comprehensively lays out List's view, and serves as a helpful framework through which to understand the debates about free will. The basic idea is that he sees free will as requiring <b>three components</b>: (1) intentional agency (2) choice between alternative possibilities (3) mental causal control over decisions. Each of these tenets is challenged by reductive materialism [23:06], determinism [36:25], and epiphenomenalism [50:40], respectively.
@@ -291,8 +269,8 @@ In response, the conceptual challenges are extremely strongly motivated and diff
 </div>
 </div>
 
-<div id="outline-container-orga27f7d4" class="outline-2">
-<h2 id="orga27f7d4"><span class="section-number-2">2</span> What is free will?</h2>
+<div id="outline-container-orgeb799a5" class="outline-2">
+<h2 id="orgeb799a5"><span class="section-number-2">2.</span> What is free will?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <span class="underline">Common conception of free will is incoherent:</span>
@@ -312,8 +290,8 @@ If our behavior is entirely determined, then we can't be free because there's no
 </div>
 </div>
 
-<div id="outline-container-org44c4984" class="outline-2">
-<h2 id="org44c4984"><span class="section-number-2">3</span> Libet experiments</h2>
+<div id="outline-container-orgf88e564" class="outline-2">
+<h2 id="orgf88e564"><span class="section-number-2">3.</span> Libet experiments</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 All that the Libet experiments show is that decisions (especially very simple ones like deciding to raise one's finger) are first made unconsciously before rising to the level of consciousness. This really shouldn't have been surprising, since most cognition is unconscious.
@@ -330,21 +308,21 @@ These experiments were also (obviously) limited to very simply decisions like de
 </div>
 </div>
 
-<div id="outline-container-orgff0dc86" class="outline-2">
-<h2 id="orgff0dc86"><span class="section-number-2">4</span> Tumors all the way down</h2>
+<div id="outline-container-org3974ea5" class="outline-2">
+<h2 id="org3974ea5"><span class="section-number-2">4.</span> Tumors all the way down</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-This idea seems to really conflate the psychology of someone who intentionally commits murder vs. someone who commits murder because they had a massive tumor. The former may very well be convinced by reasoning, deliberation, and pleading; whereas the latter is motivated by some inexorable force which is 
+This idea seems to really conflate the psychology of someone who intentionally commits murder vs. someone who commits murder because they had a massive tumor. The former may very well be convinced by reasoning, deliberation, and pleading; whereas the latter is motivated by some inexorable force which is unamenable to persuasion, and so can hardly be considered free.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd3c9a54" class="outline-2">
-<h2 id="orgd3c9a54"><span class="section-number-2">5</span> Newcomb's Paradox</h2>
+<div id="outline-container-orge4b576e" class="outline-2">
+<h2 id="orge4b576e"><span class="section-number-2">5.</span> Newcomb's Paradox</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orge036e4d" class="outline-3">
-<h3 id="orge036e4d"><span class="section-number-3">5.1</span> Statement of the problem</h3>
+<div id="outline-container-org04ff215" class="outline-3">
+<h3 id="org04ff215"><span class="section-number-3">5.1.</span> Statement of the problem</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 There are two boxes, one which is known to have $1000, and another which has either $0 or $1 million. You are allowed to choose either the one box with unknown contents, or both boxes. HOWEVER, prior to you making your decision, an incredibly intelligent being already decided what to place in the mystery box based on the following rule:
@@ -358,8 +336,8 @@ Given that She is assumed to be an incredibly reliable predictor, how should you
 </div>
 </div>
 
-<div id="outline-container-org1f38005" class="outline-3">
-<h3 id="org1f38005"><span class="section-number-3">5.2</span> Explaining the dilemma</h3>
+<div id="outline-container-orgf416ce5" class="outline-3">
+<h3 id="orgf416ce5"><span class="section-number-3">5.2.</span> Explaining the dilemma</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Each decision (one-boxing or two-boxing) has intuitive appeal.
@@ -375,8 +353,8 @@ On the other hand, if She is really such a reliable predictor, then don't I have
 </div>
 </div>
 
-<div id="outline-container-org71a7529" class="outline-3">
-<h3 id="org71a7529"><span class="section-number-3">5.3</span> Reformulating the paradox using probability theory</h3>
+<div id="outline-container-orgf75ce61" class="outline-3">
+<h3 id="orgf75ce61"><span class="section-number-3">5.3.</span> Reformulating the paradox using probability theory</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Let's try to formulate this problem more rigorously using the language of probability theory:
@@ -459,8 +437,8 @@ Here's the confusion: Are these two statements equivalent? The one-boxer says ye
 </p>
 </div>
 
-<div id="outline-container-orgadc2c42" class="outline-4">
-<h4 id="orgadc2c42"><span class="section-number-4">5.3.1</span> Two-Boxer's argument (NO)</h4>
+<div id="outline-container-org14b9240" class="outline-4">
+<h4 id="org14b9240"><span class="section-number-4">5.3.1.</span> Two-Boxer's argument (NO)</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <p>
 Statement (1) applies after the decision has already been made; I've already decided to one-box, and I have the box in my hand, but before opening the box, I can appropriately take comfort in the fact that P(B|A) is likely high.
@@ -486,8 +464,8 @@ This is why the decision to one-box is confused. It mistakenly supposes that sta
 </div>
 </div>
 
-<div id="outline-container-orgffa5d7f" class="outline-4">
-<h4 id="orgffa5d7f"><span class="section-number-4">5.3.2</span> One-Boxer's argument (YES)</h4>
+<div id="outline-container-org9ef346d" class="outline-4">
+<h4 id="org9ef346d"><span class="section-number-4">5.3.2.</span> One-Boxer's argument (YES)</h4>
 <div class="outline-text-4" id="text-5-3-2">
 <p>
 What statement (1) tells us is that if we're given the information that the player in Newcomb's problem one-boxed, then this should give us confidence that the box probably has $1 million (assuming that She is a very reliable predictor). However, in the case of statement (2), we're not given any information about what the player has decided (because he hasn't decided yet). The question is whether, per statement (2), AFTER the player has decided to one-box, do we have the same information as in statement (1)?
@@ -508,8 +486,8 @@ So why wouldn't deciding to one-box give us the same information as being told t
 </div>
 </div>
 
-<div id="outline-container-org179ee12" class="outline-3">
-<h3 id="org179ee12"><span class="section-number-3">5.4</span> Conclusion</h3>
+<div id="outline-container-org3730c19" class="outline-3">
+<h3 id="org3730c19"><span class="section-number-3">5.4.</span> Conclusion</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Recall the Monty Hall problem, where the host's decision to reveal one door with a goat somehow raises the probability that the car is behind the other door than was initially chosen. At first, this conclusion seems unacceptable: How could the probability possibly change? It's not like the remaining goat and car were somehow shuffled around after the reveal! But this concern seems to be resolved once we explain that the probability is based on our INFORMATION about the positions of the goats and car (which does change), not the ACTUAL positions of the goats and car (which doesn't change).
@@ -537,8 +515,8 @@ Personally, I think Newcomb's so-called paradox is therefore resolved by the dec
 </div>
 </div>
 
-<div id="outline-container-orgb67b622" class="outline-3">
-<h3 id="orgb67b622"><span class="section-number-3">5.5</span> Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</h3>
+<div id="outline-container-org242b24e" class="outline-3">
+<h3 id="org242b24e"><span class="section-number-3">5.5.</span> Evidential Decision Theory (EDT) vs. Causal Decision Theory (CDT)</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 Although my conclusion in favor of one-boxing was quite adamant, I should point out that my conclusion technically relies on favoring <i>evidential decision theory</i> over <i>causal decision theory</i>, and that this is typically what interests most people about the paradox.
@@ -549,7 +527,7 @@ Although my conclusion in favor of one-boxing was quite adamant, I should point 
 </p>
 
 <p>
-<span class="underline">Causal Decision Theory (EDT):</span> Take the action which, given the state of the world (things outside of one's control), causes the best expected outcome.
+<span class="underline">Causal Decision Theory (CDT):</span> Take the action which, given the state of the world (things outside of one's control), causes the best expected outcome.
 </p>
 
 <p>
@@ -573,7 +551,7 @@ That being said, there are very interesting counter-examples to EDT such as the 
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-03-25 Fri 11:44</p>
+<p class="date">Created: 2022-06-27 Mon 23:06</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

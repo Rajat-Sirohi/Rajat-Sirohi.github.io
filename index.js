@@ -112,8 +112,9 @@ function App() {
             <List title="Notes:" major inline elems={[
                 <a href="notes/reason.html">Reason vs. Emotion</a>,
                 <a href="notes/ethics.html">Ethics</a>,
+                <a href="notes/dialogues.html">Dialogues</a>,
                 <a href="notes/free_will.html">Free Will</a>,
-                <a href="notes/epistemology.html">Epistemology</a>,
+                <a href="notes/religion.html">Religion</a>,
             ]} />
 
             <List title="Poetry:" major inline buttons elems={[

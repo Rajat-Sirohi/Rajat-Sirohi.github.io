@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-06-27 Mon 23:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Religion</title>
+<link rel="stylesheet" href="../style.css">
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb7d0671">1. General Remarks</a></li>
+<li><a href="#org87fee8b">2. Euthyphro's Dilemma</a></li>
+<li><a href="#orgc4601ac">3. The Free Will Theodicy</a></li>
+<li><a href="#org304d7c9">4. Skeptical Response to Problem of Evil</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb7d0671" class="outline-2">
+<h2 id="orgb7d0671"><span class="section-number-2">1.</span> General Remarks</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Firstly, one should consider: What is God? From a philosophical perspective, God seems to respond to a great many existential, metaphysical, epistemological concerns, which anybody of sufficient curiosity inevitably confronts. He provides a foundation for the peculiarity of the human condition and for many people appears as an almost obvious, deeply compelling fact of reality. From a religious perspective, God is the object of prayer, author of miracles, and spiritual guide and overseer.
+</p>
+
+<p>
+Understood in this way, God occupies one spot among a variety of competing philosophical theories: Platonism, naturalism, constructivism, nominalism, etc. Although there are arguments for each position (and rich ones at that), the reasons by which one adjudicates among these possibilities ultimately come down to intuitions and seemings. I don't think there are any rationally compelling justifications for any particular metaphysical worldview. We can discuss the pros and cons and the argument for and against, but there are certain intuitions which restrict our ability to be convinced. These intuitions are not immutable and sometimes arguments may even mold them, but they are not escapable through some appeal to objective reason.
+</p>
+
+<p>
+As such, I don't see religious beliefs as necessarily irrational. The main point to stress is that <b>religion is not necessarily superstition</b>. Superstition maintains an unfalsifiable belief in the face of an abundance of evidence to the contrary. On the other hand, there are good reasons to believe in a God and neither science nor anything else utterly undermines it. Arguments for naturalism exist and would undermine belief in a God, but they are far from uncontentious and certainly cannot be equated to the reality of great scientific achievement. What becomes apparent once one studies the philosophy of religion is that there is very reasonable disagreement concerning the existence of God and that therefore religion is not <i>de facto</i> irrational.
+</p>
+
+<p>
+A note on <i>epistemology</i>: My study of religion has led me to deeply reconsider my epistemology and the reasons I have for believing anything. Whereas I was previously convinced that every position was either rational or irrational, I've now realized (somewhat to my disappointment) that there is incredible room for reasonable disagreement. Furthermore, what intuitions and seemings one has greatly influences their receptivity to particular theories, and so profound disagreement may rest on a disagreement at this level rather than at the level of reason.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87fee8b" class="outline-2">
+<h2 id="org87fee8b"><span class="section-number-2">2.</span> Euthyphro's Dilemma</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>Do the gods will that which is good, or is it good because the gods will it?</b>
+</p>
+
+<p>
+<span class="underline">Attempt to split the horns:</span>
+Some, like WLC and Feser, attempt to split the horns by suggesting that for something to be good is simply for it to be in accordance with God's will. And so he neither wills that which is good (defined independently of God's will) nor is something good because God wills it (arbitrarily). In other words, the descriptions are <i>semantically equivalent</i>.
+</p>
+
+<p>
+As an analogy, consider the following question: "Is a man a bachelor because he is unmarried or is he unmarried because he is a bachelor?" Clearly, we want to reject the false dichotomy and instead say that a bachelor <i>simply is</i> an unmarried man; the two descriptions of the man are <i>semantically equivalent</i>&#x2026;they just mean the same thing.
+</p>
+
+<p>
+The main problem with this attempt to split the horns in the case of the Euthyphro's dilemma is that the two descriptions (1) "being in accordance with God's will" and (2) "being good" are clearly <i>semantically distinct</i>. It's just obvious that we don't mean the same thing by them in the way that we mean the same thing by "bachelor" and "unmarried man".
+-&gt; One way of explaining this is to run an open question argument: "Is it actually the case that this good thing is willed by God?" Unfortunately, open question arguments are notoriously faulty because they just rely on the ignorance of the inquirer. It's perfectly possible to defuse this objection by proposing some conceptual analysis which closes the question, just as we can close the question of whether an unmarried man is actually a bachelor simply by clarifying the meanings of both terms and realizing that they are equivalent. The fact that, say, a non-native English speaker might ask this question is not a good reason to believe that "unmarried man" and "bachelor" don't mean the same thing.
+-&gt; So, in order to really press this objection, we have to stress exactly what's being claimed. Namely, the "horn splitter" is claiming that to say that "God wills it" is <i>semantically equivalent</i> to saying that "it is good". This is NOT the same claim as "God wills it if and only if it is good"! The former is a claim about the meanings of terms, whereas the latter claim is one about the relationship between God's will and that which is good. Importantly, the second claim is redundant if we accept the first claim; it would be like saying "God wills it if and only if God wills it" if the two concepts are truly <i>semantically equivalent</i>.
+-&gt; From the above, I think it's clear why this approach to splitting the horns seems so implausible. In order to explain why, we must simply stress the distinction between the two claims above, because the "horn splitter" will most likely equivocate between the two (arguing for the latter by explaining why God's nature is necessarily good, while utilizing the former in order to get out of Euthyphro's dilemma). When they do this, just respond by observing that their argument in defense of God's nature being essentially good is completely redundant (hence absurd) if we really think that they mean the same thing. It would be like giving an argument for why a bachelor is necessarily an unmarried man&#x2014;this doesn't require an argument, it just requires a mutual acknowledgment that the two descriptions are semantically equivalent. For anyone arguing otherwise, they must be employing some private language, and so it's impossible to have a discussion with them on this topic.
+-&gt; In summary, the "horn splitters" don't actually believe what they're purporting (that the two concepts are semantically equivalent). Rather, they believe that God is essentially good, and so his will is necessarily in accordance with that which is good and vice versa. When they acknowledge this, you must point out that this more reasonable claim doesn't actually get them out of Euthyphro's dilemma because we can still ask "Why is God's will essentially good?" They'll have to fall on one of three horns: the original two and this new third one, which is that the two concepts are semantically equivalent. (Note: if this seems like a pivot from the original dilemma, it's really just an unnecessary caveat stipulated in order to highlight the slipperiness of the initial response. No reasonable person would actually claim that the two concepts are semantically equivalent, and so it's understandably left out of the original formulation as a courtesy, out of respect for the intellectual honesty of the interlocutor.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4601ac" class="outline-2">
+<h2 id="orgc4601ac"><span class="section-number-2">3.</span> The Free Will Theodicy</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Why does God permit the existence of evil? We must acknowledge that God permits these things, or else concede that God is not omnipotent. This does not necessarily mean that God <i>condones</i> evil, but just that he permits its existence, presumably in the service of some of facilitating some greater good. One common proposal for such a "greater good" is that of <b>free will</b>. The claim is that in order for people to accept God's love, they must do so freely, and not by coercion. There are a number of issues with this appeal: (1) Free will isn't necessary for love (2) Even if it were necessary, the benefits of freedom don't outweigh the immense costs in terms of suffering (3) Moreover, God could have protected free will without permitting egregious (or any) suffering.
+</p>
+
+<p>
+<span class="underline">(1) Is Free Will Necessary for Love?</span>
+Can't robots, if they were conscious, experience love? Surely love is just an experience that's available to any creature with sufficient cognitive capabilities. It doesn't seem to necessarily rest upon any freedom. I think the confusion stems from the fact that people assume that the only alternative to freedom is coercion, whereas robots aren't either free or coerced, they just do&#x2026;Coercion implies that a being had the ability to act in some way, but was artificially restricted. Whereas what I'm proposing is that we could have been like automata, who simply were born to love God and accept his grace. This doesn't seem so bad and, importantly, doesn't require free will.
+</p>
+
+<p>
+<span class="underline">(2) Does Free Will Justify Egregious Suffering?</span>
+God is often likened to a parent, our father in heaven. So, when He grants us the freedom to make mistakes, he is acting as a good parent does, by giving us the opportunity to learn from our mistakes and grow into mature, capable adults. Of course, unlike our human parents, God could have just taught us to do the right thing from the start, rather than forcing us to learn the hard way, often at the expense of others. So, the analogy is already flawed, but let's take it one step further&#x2026;We all acknowledge that a responsible parent doesn't simply grant unlimited freedom to their children. Instead, they recognize that babies, for example, are not mature enough to handle dangerous weapons, because they cannot comprehend their destructive potential and act accordingly. Thus, we, as responsible parents, prevent babies from handling dangerous weapons. Why, then, doesn't God act like a responsible parent and prevent us humans from handling dangerous weapons, like nuclear warheads, when we've so clearly demonstrated to him that we're not capable of handling them with the requisite caution? Why doesn't God, if He really cares about us, step in to prevent us from seriously hurting ourselves?
+</p>
+
+<p>
+Some apologists will attack ridiculous strawmen, claiming that I'm suggesting God should intervene at every moment to correct our behavior, which would utterly trivialize our freedom. But this objection is clearly misled, just as it would be mistaken for a human parent to respond in this way to another parent suggesting that he should prevent his children from walking off a dangerous cliff: "I'm not claiming that you should intervene constantly, just when it's really necessary for the protection of both themselves and others! That's what a responsible parent does, balancing the competing values of freedom and safety!"
+</p>
+
+<p>
+Therefore, the only way to get out of my challenge (without denying fundamental properties of God, such as his omnipotence or benevolence) is to suggest that the kind of egregious suffering which we witness all the time actually has an extenuating justification other than free will. I'm genuinely horrified by attempts to respond in this way, and all such attempts which I've encountered have completely failed to appropriately recognize the extent and nature of actual suffering throughout the history of life. Moreover, they tend to just cherry pick examples of suffering which ended up having some benefits, but they fail to defend the claim that these benefits actually <i>justify</i> permitting the suffering. Here's a good question to keep in mind in order to determine whether a person's response really answers the challenge: "You said that XYZ suffering was actually good because it was necessary for bringing about certain goods. So, would you willingly impose XYZ suffering on someone you love in order to bring about these same goods for them? If not, then it doesn't seem that you really believe that these goods are so worthwhile as to warrant the suffering, in which case God would not be justified in permitting this suffering on the basis of these auxiliary goods either."
+</p>
+
+<p>
+<span class="underline">(3) Free Will Doesn't Entail Suffering</span>
+This is, I think, the most devastating objection to the free will theodicy. The fact is that God could have created us humans in such a way that we had free will, but (because of our nature) we always choose to do what is right. The usual rebuttal is that this is not real freedom! But in that case, we must simply ask, "Does God have free will? And isn't God's nature such that he will always do what is right?" So&#x2014;unless we give up God's benevolence&#x2014;either God doesn't actually have free will, which poses serious issues for conceiving of God as a personal being who chooses to love us and respond to our prayers and so on, OR free will is consistent with always doing the right thing. Let's explore this latter alternative:
+</p>
+
+<p>
+If it's the case that God could have created us in such a way that we always do what is right, then isn't he basically turning us all into gods? I think not. I'm not suggesting that we must be omnipotent or omniscient, only that we our wills are properly ordered towards the Good. Presumably, this is what would already be the case in heaven, and so I'm basically just wondering why we couldn't all start out in heaven, and skip this farcical trial of life. That way, there would be no victims of the egregious suffering which we witness during life, and we could protect people's free will too (if this is taken to be valuable).
+</p>
+
+<p>
+<span class="underline">Concluding Remarks</span>
+On this topic, I will likely be accused of making wildly speculative claims far beyond my knowledge. As a simple human, I can't possibly comprehend the reasons which God has for doing what he does, and am in no position to speculate about what he should have done instead. Firstly, this concession relegates most theology to the dustbin, and also provides strong reasons for people to be very skeptical about the theological claims which they cherish, such as that God loves them and has a special plan for them and will reward their devotion with eternal life and so on. Secondly, I'm not claiming to have any particularly strong conviction in my proposals for what God should have done. Instead, what I'm suggesting is that I don't have much better reasons to believe that God loves all people and cares for them deeply and whatever else I'm told I should believe. Therefore, in light of the fact that the available evidence is weak and contradictory, I should simply remain agnostic, which is precisely what I do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org304d7c9" class="outline-2">
+<h2 id="org304d7c9"><span class="section-number-2">4.</span> Skeptical Response to Problem of Evil</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Some will respond to the problem of evil by insisting that we lowly humans with our limited capacities do not have the ability to adequately assess all of the potential consequences of eliminating some particular evil, and so we are not justified in claiming to know that God should have eliminated that particular evil. The point is neither to say that God is justified nor unjustified in permitting the ubiquitous suffering which he evidently does. Rather, the point is to say that we are not in a position to make this determination, and so the problem of evil (when formulated as an argument against the existence of God) fails. Basically, this is God's response to Job.
+</p>
+
+<p>
+The main difficulty with this is that if we apply the motivating principle consistently, then we are reduced to a state of paralysis. That's because even concerning our own actions, there are innumerable potential downstream consequences of which we are unaware and which might be disastrous. If we are intellectually honest, then we must admit that we can't (with certainty) rule out such consequences even for seemingly innocent actions. Thus, if the skeptic is consistent, he shouldn't act at all given the potential consequences.
+</p>
+
+<p>
+&#x2026;
+</p>
+
+<p>
+I'm too unfocused to finish this entry at the moment, but the basic point which I wanted to note is this. It seems that, when evaluating a particular action, we only really need to consider the <b>relevant</b> consequences, which doesn't require omniscience for simple actions whose relevant consequences are quite limited and so intelligible by even us humans with our limited capacities. So, we are justified in our confidence that it's good to help a drowning child, in which case it seems that we are justified in rebuking God for permitting the child to drown.
+</p>
+
+<p>
+Two concerns:
+</p>
+
+<p>
+(1) How do we determine which consequences are relevant? Often, it seems like we just call those consequences which are too indirect to evaluate "irrelevant", which is not unreasonable for us as humans with limited capacities, but then the concept of irrelevance would be illegitimate for a God who is omniscient. Maybe God is justified in permitting some suffering because he is capable of seeing the highly indirect downstream consequences which seem outlandish to us.
+</p>
+
+<p>
+(2) Even if we grant some notion of relevance, it seems like which considerations are relevant will depend in part upon the capabilities of the actor. For instance, when I intervene to stop a pointless fight, the prospect of infringing upon their free will does not arise, whereas it might if God intervened. Therefore, these new relevant considerations might be a symmetry breaker between what's an obligation for me vs. what's an obligation for God.</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-06-27 Mon 23:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
