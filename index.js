@@ -27,20 +27,49 @@ class Clock extends React.Component {
 }
 
 class Quote extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { translationActive: false };
+    }
+
+    toggleTranslation() {
+        this.setState(prevState => {
+            return { translationActive: !prevState.translationActive };
+        });
+    }
+
     render() {
+        var cursorStyle, text, author, citation;
+        if (this.props.translatable) {
+            cursorStyle="pointer"
+            if (this.state.translationActive) {
+                text=this.props.transText
+                author=this.props.transAuthor
+                citation=this.props.transCitation
+            } else {
+                text=this.props.origText
+                author=this.props.origAuthor
+                citation=this.props.origCitation
+            }
+        } else {
+            cursorStyle="auto"
+            text=this.props.text
+            author=this.props.author
+            citation=this.props.citation
+        }
+
         return (
-			<div className="quote">
-				<blockquote>{this.props.text}</blockquote>
-				{this.props.author &&
-				<span className="quoteCitation">
-					&mdash; <a href={this.props.source}>{this.props.author}</a>
-					{this.props.citation && <span>, <cite>{this.props.citation}</cite></span>}
-				</span>}
-			</div>
+            <div className="quote" onClick={() => this.toggleTranslation()} style={{ cursor: cursorStyle }}>
+                <blockquote>{text}</blockquote>
+                {author &&
+                <span className="quoteCitation">
+                    &mdash; <a href={this.props.source}>{author}</a>
+                    {citation && <span>, <cite>{citation}</cite></span>}
+                </span>}
+            </div>
         );
     }
 }
-
 
 class Poem extends React.Component {
     render() {
@@ -99,10 +128,9 @@ function App() {
                 <img src="images/great_stellated_dodecahedron.png" width="70" />
             </center>
 
-            {/* <Quote text="Above all, do not lie to yourself. A man who lies to himself and listens to his own lie comes to a point where he does not discern any truth either in himself or anywhere around him, and thus falls into disrespect towards himself and others. Not respecting anyone, he ceases to love, and having no love, he gives himself up to passions and coarse pleasures, in order to occupy and amuse himself, and in his vices reaches complete bestiality, and it all comes from lying continually to others and to himself." author="Fyodor Dostoevsky" citation="The Brothers Karamazov" /> */}
-            <Quote text="Главное, самому себе не лгите. Лгущий самому себе и собственную ложь свою слушающий до того доходит, что уж никакой правды ни в себе, ни кругом не различает, а стало быть, входит в неуважение и к себе и к другим. Не уважая же никого, перестает любить, а чтобы, не имея любви, занять себя и развлечь, предается страстям и грубым сладостям и доходит совсем до скотства в пороках своих, а все от беспрерывной лжи и людям и себе самому." author="Фёдор Михайлович Достоевский" citation="Братья Карамазовы" />
-            {/* <Quote text="I have laboured carefully, not to mock, lament, or execrate human actions, but to understand them; and, to this end, I have looked upon passions, such as love, hatred, anger, envy, ambition, pity, and the other perturbations of the mind, not in the light of vices of human nature, but as properties, just as pertinent to it, as are heat, cold, storm, thunder, and the like to the nature of the atmosphere, which phenomena, though inconvenient, are yet necessary, and have fixed causes, by means of which we endeavour to understand their nature, and the mind has just as much pleasure in viewing them aright, as in knowing such things as flatter the senses." author="Baruch Spinoza" citation="Tractatus Theologico-Politicus" /> */}
-            <Quote text="Sedulo curavi, humanas actiones non ridere, non lugere, neque detestari, sed intelligere; atque adeo humanos affectus, ut sunt amor, odium, ira, invidia, gloria, misericordia et reliquae animi commotiones non ut humanae naturae vitia, sed ut proprietates contemplatus sum, quae ad ipsam ita pertinent, ut ad naturam aëris aestus, frigus, tempestas, tonitru et alia huiusmodi, quae, tametsi incommoda sunt, necessaria tamen sunt, certasque habent causas, per quas eorum naturam intelligere conamur, et mens eorum vera contemplatione aeque gaudet, ac earum rerum cognitione, quae sensibus gratae sunt." author="Baruch Spinoza" citation="Tractatus Theologico-Politicus" />
+            <Quote translatable origText="Главное, самому себе не лгите. Лгущий самому себе и собственную ложь свою слушающий до того доходит, что уж никакой правды ни в себе, ни кругом не различает, а стало быть, входит в неуважение и к себе и к другим. Не уважая же никого, перестает любить, а чтобы, не имея любви, занять себя и развлечь, предается страстям и грубым сладостям и доходит совсем до скотства в пороках своих, а все от беспрерывной лжи и людям и себе самому." origAuthor="Фёдор Михайлович Достоевский" origCitation="Братья Карамазовы" transText="Above all, do not lie to yourself. A man who lies to himself and listens to his own lie comes to a point where he does not discern any truth either in himself or anywhere around him, and thus falls into disrespect towards himself and others. Not respecting anyone, he ceases to love, and having no love, he gives himself up to passions and coarse pleasures, in order to occupy and amuse himself, and in his vices reaches complete bestiality, and it all comes from lying continually to others and to himself." transAuthor="Fyodor Mikhailovich Dostoevsky" transCitation="The Brothes Karamazov" />
+            <Quote translatable origText="Тишина продолжалась, и вдруг я ощутил у виска, у волос моих, холодное прикосновение железа. Вы спросите: твердо ли я надеялся, что спасусь? Отвечу вам, как перед Богом: не имел никакой надежды, кроме разве одного шанса из ста. Для чего же принимал смерть? А я спрошу: на что мне была жизнь после револьвера, поднятого на меня обожаемым мною существом?" origAuthor="Фёдор Михайлович Достоевский" origCitation="Кроткая: Фантастический рассказ" transText="The silence continued, and suddenly I felt the cold touch of steel at my temple, at my hair. You will ask me, did I have any hope of escape? I will answer you—and God knows I am speaking the truth—none at all, not an atom of hope, except perhaps one chance in a hundred. Why, then, did I accept death? Well, let me ask you in turn: of what use was life to me after a gun had been levelled against me by a human being I adored?" transAuthor="Fyodor Mikhailovich Dostoevsky" transCitation="A Gentle Creature: A Fantastic Story" />
+            <Quote translatable origText="Sedulo curavi, humanas actiones non ridere, non lugere, neque detestari, sed intelligere; atque adeo humanos affectus, ut sunt amor, odium, ira, invidia, gloria, misericordia et reliquae animi commotiones non ut humanae naturae vitia, sed ut proprietates contemplatus sum, quae ad ipsam ita pertinent, ut ad naturam aëris aestus, frigus, tempestas, tonitru et alia huiusmodi, quae, tametsi incommoda sunt, necessaria tamen sunt, certasque habent causas, per quas eorum naturam intelligere conamur, et mens eorum vera contemplatione aeque gaudet, ac earum rerum cognitione, quae sensibus gratae sunt." origAuthor="Baruch Spinoza" origCitation="Tractatus Theologico-Politicus" transText="I have laboured carefully, not to mock, lament, or execrate human actions, but to understand them; and, to this end, I have looked upon passions, such as love, hatred, anger, envy, ambition, pity, and the other perturbations of the mind, not in the light of vices of human nature, but as properties, just as pertinent to it, as are heat, cold, storm, thunder, and the like to the nature of the atmosphere, which phenomena, though inconvenient, are yet necessary, and have fixed causes, by means of which we endeavour to understand their nature, and the mind has just as much pleasure in viewing them aright, as in knowing such things as flatter the senses." transAuthor="Baruch Spinoza" transCitation="Tractatus Theologico-Politicus" />
             <Quote text="If you give children a vocabulary that's large enough and complex enough to express their emotions and their ideas...you give them access to complex feelings and emotions within themselves. If you talk to a teenager and all they can say about how they feel is 'bad', and they haven't got a larger vocabulary for 'lonely', 'abused', 'insecure', 'frightened', a huge panoply of words---I remember when my daughter was just telling me that she just felt bad, I bought her a thesaurus! ... What that does is it makes you feel that you can experience this huge complex of emotions at once, and that there are words for all of them. If you want children to feel less frustrated and less disenfranchised and less unable to even feel comfortable with their own emotions, you have to give them a vocabulary that's as complicated as their inner lives." author="Jorie Graham" source="https://www.youtube.com/watch?v=Zat9RXji1Vw&t=1217s" />
             <Quote text="The fool who rests his retirement on the lottery is not vindicated, but rescued, by luck." />
             <Quote text="I never contradict myself; and if I do, then so be it..." />
