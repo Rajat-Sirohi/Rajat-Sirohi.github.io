@@ -72,11 +72,38 @@ class Quote extends React.Component {
 }
 
 class Poem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { translationActive: false };
+    }
+
+    toggleTranslation() {
+        this.setState(prevState => {
+            return { translationActive: !prevState.translationActive };
+        });
+    }
+
     render() {
+        var cursorStyle, text, author;
+        if (this.props.translatable) {
+            cursorStyle="pointer"
+            if (this.state.translationActive) {
+                text=this.props.transText
+                author=this.props.transAuthor
+            } else {
+                text=this.props.origText
+                author=this.props.origAuthor
+            }
+        } else {
+            cursorStyle="auto"
+            text=this.props.text
+            author=this.props.author
+        }
+
         return (
-			<div>
-                <div style={{whiteSpace: "pre-line", marginBottom: "20px"}}>{this.props.text}</div>
-                <span>&mdash; <i>{this.props.author}</i></span>
+			<div onClick={() => this.toggleTranslation()} style={{ cursor: cursorStyle }}>
+                <div style={{whiteSpace: "pre-line", marginBottom: "20px"}}>{text}</div>
+                <span>&mdash; <i>{author}</i></span>
 			</div>
         );
     }
@@ -148,13 +175,20 @@ function App() {
             <List title="Poetry:" major inline buttons elems={[
                 {
                     label: "Moving On",
-                    content: <Poem title="Moving On" author="Rajat Sirohi"
+                    content: <Poem author="Rajat Sirohi"
                     text={"Five years have passed since I last saw you,\nThe sight of your grave's more familiar than your face.\nTime keeps moving and your memory slowly fades,\nI'm supposed to move on, but I'll never forget you.\n\nWhen you first arrived, I refused to meet your eyes.\nYou kept your distance, but never left my side.\nInch by inch, paw by paw, you crept up beside me,\nLeft a mark on my heart, saying that you'll always love me.\n\nWhen you finally left us, I learned that I loved you.\nYour body's now gone, but that mark only grew,\nOn my heart, in our family, in photos and memories;\nDeath's just a lie, love grants us immortality.\n\nNo need to cry, or grieve, or despair;\nYou're still right here with us, I promise, I swear!\nThen why can't I touch you, hear you, or see you?\nYou don't keep on living, just 'cause I want you to...\n\nSometimes things change, for better or worse,\nNature knows not justice, nor prayer, nor worth;\nHer whim is our fate, we choose only our response,\nI choose truth, won't pretend everything's how I want...\n\nI admit that you're gone, but you're more than that moment\nOf departure, anguish, mourning, bereavement.\nTo leave these behind is not to forget you,\nBut to accept what's been lost and cherish what's still true.\n\nAll this time later, I still know that you're with me.\nIt's not quite the same, and it never will be,\nBut love lives on, past death and misfortune;\nYou're gone, I've moved on, not forgotten."} />
                 },
                 {
                     label: "Нищий",
-                    content: <Poem title="Нищий" author="Михаил Лермонтов"
-                    text={"У врат обители святой\nСтоял просящий подаянья\nБедняк иссохший, чуть живой\nОт глада, жажды и страданья.\n\nКуска лишь хлеба он просил,\nИ взор являл живую муку,\nИ кто-то камень положил\nВ его протянутую руку.\n\nТак я молил твоей любви\nС слезами горькими, с тоскою;\nТак чувства лучшие мои\nОбмануты навек тобою!"} />
+                    content: <Poem translatable origAuthor="Михаил Лермонтов" transAuthor="Mikhail Lermontov"
+                    origText={"У врат обители святой\nСтоял просящий подаянья\nБедняк иссохший, чуть живой\nОт глада, жажды и страданья.\n\nКуска лишь хлеба он просил,\nИ взор являл живую муку,\nИ кто-то камень положил\nВ его протянутую руку.\n\nТак я молил твоей любви\nС слезами горькими, с тоскою;\nТак чувства лучшие мои\nОбмануты навек тобою!"}
+                    transText={"By gates of an abode, blessed,\nA man stood, asking for donation,\nA beggar, cruelly oppressed\nBy hunger, thirst and deprivation.\n\nHe asked just for a peace of bread,\nAnd all his looks were full of anguish,\nAnd was a cold stone laid\nInto his stretched arm, thin and languished.\n\nThus I prayed vainly for your love,\nWith bitter tears, pine and fervor,\nThus my best senses, that have thrived,\nWere victimized by you forever!"} />
+                },
+                {
+                    label: "Les Amours de Marie XXV",
+                    content: <Poem translatable origAuthor="Pierre de Ronsard" transAuthor="Pierre de Ronsard"
+                    origText={"Les villes et les bourgs me sont si odieux\nQue je meurs si je vois quelque tracette humaine.\nSeulet dedans les bois, pensif, je me promène,\nEt rien ne m'est plaisant que les sauvages lieux.\n\nIl n'y a dans ces bois sangliers si furieux,\nNi roc si endurci, ni ruisseau, ni fontaine,\nNi arbre, tant soit sourd, qui ne sache ma peine\nEt qui ne soit marri de mon mal ennuyeux.\n\nUn penser qui renaît d'un autre m'accompaigne\nAvec un pleur amer qui tout le sein me baigne;\nTravaillé de soupirs qui si triste me font,\n\nQue si quelque passant me trouvait au bocage,\nVoyant mon poil rebours et l'horreur de mon front,\nNe me dirait pas homme, ains un monstre sauvage."}
+                    transText={"The cities and towns are so hateful to me,\nThat I am horrified when I see a human footprint.\nWandering alone in the forest, I avoid confrontation;\nNothing pleases me more than the wilderness.\n\nThere are no boars in these woods, so furious,\nNeither rock so hardened, nor stream, nor fountain,\nNeither tree, however deaf, who does not know my sorrow\nAnd who is not embroiled in my tireless suffering.\n\nA thought which keeps arising accompanies me\nAnd, in a sorrowful groan, pouring out my whole soul,\nI sigh endlessly, and continue to despair,\n\nWere someone to stumble upon me in the grove\nObserve my dishevelment and consternation,\nHe would reward me with the nickname of a freak."} />
                 },
             ]} />
         
